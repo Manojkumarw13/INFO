@@ -1,0 +1,302 @@
+{
+  "scripts/sync_notion_roadmap.py": {
+    "mtime": 1780497500.5504026,
+    "ast_hash": "19aab910ce12f54dc107d055d5025569",
+    "semantic_hash": "19aab910ce12f54dc107d055d5025569"
+  },
+  "AI system/AI_Agent_OS_Roadmap.md": {
+    "mtime": 1780853308.653088,
+    "ast_hash": "59d962b0b5d42c38606c64bae5ab33e9",
+    "semantic_hash": "59d962b0b5d42c38606c64bae5ab33e9"
+  },
+  "AI system/AI_OS_Complete_Toolkit_Guide.md": {
+    "mtime": 1780810977.683783,
+    "ast_hash": "e2e70a061932932f76faca3812416d55",
+    "semantic_hash": "e2e70a061932932f76faca3812416d55"
+  },
+  "AI system/PAIOS_6Week_Project_Roadmap.md": {
+    "mtime": 1780925211.6647916,
+    "ast_hash": "e13636336f3878a03cb53578068736d3",
+    "semantic_hash": "e13636336f3878a03cb53578068736d3"
+  },
+  "AI system/PAIOS_YouTube_Roadmap.md": {
+    "mtime": 1780983788.8670657,
+    "ast_hash": "6ca083b188e7b37d977e5ae166b6433d",
+    "semantic_hash": "6ca083b188e7b37d977e5ae166b6433d"
+  },
+  "AI system/ai_agent_os_8week_roadmap.md": {
+    "mtime": 1780850487.3056202,
+    "ast_hash": "8e1947543a2b6176f3fcace26fa747b6",
+    "semantic_hash": "8e1947543a2b6176f3fcace26fa747b6"
+  },
+  "AI system/free-ai-models-comprehensive-2026.md": {
+    "mtime": 1780813495.597132,
+    "ast_hash": "e14f41414d8fc205d8137807adb8cceb",
+    "semantic_hash": "e14f41414d8fc205d8137807adb8cceb"
+  },
+  "AI system/free-ai-models-guide-2026.md": {
+    "mtime": 1780761061.90615,
+    "ast_hash": "f1e50b3f2fdfaf40e047dfe793529d54",
+    "semantic_hash": "f1e50b3f2fdfaf40e047dfe793529d54"
+  },
+  "AI system/free-cloud-ai-models-2026.md": {
+    "mtime": 1780761963.8160534,
+    "ast_hash": "2264890b87d04c02898b95dda71464af",
+    "semantic_hash": "2264890b87d04c02898b95dda71464af"
+  },
+  "AI system/personal-ai-os-architecture.md": {
+    "mtime": 1780810909.0150561,
+    "ast_hash": "bbca078dd0675c3aa843bbad9bfe94be",
+    "semantic_hash": "bbca078dd0675c3aa843bbad9bfe94be"
+  },
+  "README.md": {
+    "mtime": 1781188674.68966,
+    "ast_hash": "74df60ab868c77ee6aff783841141900",
+    "semantic_hash": ""
+  },
+  "careers/global_careers_comparison.md": {
+    "mtime": 1779639527.9050033,
+    "ast_hash": "7f4ed9dd290c39aa582b562237e60f62",
+    "semantic_hash": "7f4ed9dd290c39aa582b562237e60f62"
+  },
+  "careers/swiss_ai_ds_vs_alternatives.md": {
+    "mtime": 1779712938.3648682,
+    "ast_hash": "b2ffab6c25902355396354219fbe06f4",
+    "semantic_hash": "b2ffab6c25902355396354219fbe06f4"
+  },
+  "careers/swiss_quant_vs_ai_ds_careers.md": {
+    "mtime": 1779622967.2143972,
+    "ast_hash": "307cc89b5a0de4c420b9374230b87f70",
+    "semantic_hash": "307cc89b5a0de4c420b9374230b87f70"
+  },
+  "careers/top4_qol_inr_comparison.md": {
+    "mtime": 1779714314.145556,
+    "ast_hash": "fbaa5aec2c9d4a535c4a9dc87651afe9",
+    "semantic_hash": "fbaa5aec2c9d4a535c4a9dc87651afe9"
+  },
+  "companies/swiss_quant_ai_companies.html": {
+    "mtime": 1779621087.8014092,
+    "ast_hash": "a100071ffbab4fed4716810f1ad087df",
+    "semantic_hash": "a100071ffbab4fed4716810f1ad087df"
+  },
+  "companies/swiss_quant_ai_companies_guide.html": {
+    "mtime": 1779621880.3793118,
+    "ast_hash": "9ee2e310be0cf8c13ff052609830d621",
+    "semantic_hash": "9ee2e310be0cf8c13ff052609830d621"
+  },
+  "companies/swiss_quant_ai_companies_profiles.md": {
+    "mtime": 1779715070.61498,
+    "ast_hash": "73e0c296d4f0ac155998e0080ad85880",
+    "semantic_hash": "73e0c296d4f0ac155998e0080ad85880"
+  },
+  "companies/swiss_quant_ai_companies_table.md": {
+    "mtime": 1779715061.2413864,
+    "ast_hash": "a20ca7fe8ec2104dae2f767e5e9267a4",
+    "semantic_hash": "a20ca7fe8ec2104dae2f767e5e9267a4"
+  },
+  "education/AI_DataScience_International_Student_Comparison.md": {
+    "mtime": 1779870501.805085,
+    "ast_hash": "babf376a60f82ac53b0fb22343b57580",
+    "semantic_hash": "babf376a60f82ac53b0fb22343b57580"
+  },
+  "education/AI_Masters_Global_Guide_Fall2027.md": {
+    "mtime": 1779712669.3497505,
+    "ast_hash": "7d5dd5b5e8ecee8bb8b9f4f81f8d6d62",
+    "semantic_hash": "7d5dd5b5e8ecee8bb8b9f4f81f8d6d62"
+  },
+  "education/Comprehensive_Global_Education_Guide_2027.md": {
+    "mtime": 1780677626.4517047,
+    "ast_hash": "a6e100b6a6e30002e6ff3d15aca97b71",
+    "semantic_hash": "a6e100b6a6e30002e6ff3d15aca97b71"
+  },
+  "education/Masters_Finance_FinTech_AI_Quant_2027_Guide.md": {
+    "mtime": 1779639537.9622314,
+    "ast_hash": "dab8dd354a273cec88be0855a91822a8",
+    "semantic_hash": "dab8dd354a273cec88be0855a91822a8"
+  },
+  "education/india_education_loan_abroad_guide.md": {
+    "mtime": 1780764143.3451712,
+    "ast_hash": "8d9b94b5d2492a640be776e4fe6e10fc",
+    "semantic_hash": "8d9b94b5d2492a640be776e4fe6e10fc"
+  },
+  "education/international_study_comparison.md": {
+    "mtime": 1779633248.775939,
+    "ast_hash": "bae0138936a729fec2a0ce057037bf29",
+    "semantic_hash": "bae0138936a729fec2a0ce057037bf29"
+  },
+  "education/project_based_learning_roadmap_prompt_template.md": {
+    "mtime": 1780850495.5635076,
+    "ast_hash": "f41a01f488b22c01e0efefcba2d8be2b",
+    "semantic_hash": "f41a01f488b22c01e0efefcba2d8be2b"
+  },
+  "education/study_abroad_comprehensive_plan.md": {
+    "mtime": 1780673145.8149948,
+    "ast_hash": "5106f5a2407d0a6a4bb75c32a22ba8c5",
+    "semantic_hash": "5106f5a2407d0a6a4bb75c32a22ba8c5"
+  },
+  "education/study_abroad_gap_analysis.md": {
+    "mtime": 1780764000.2490323,
+    "ast_hash": "f396e51e59c0fa3ec8e24d1dc2b992d8",
+    "semantic_hash": "f396e51e59c0fa3ec8e24d1dc2b992d8"
+  },
+  "education/study_abroad_gap_analysis_advanced.md": {
+    "mtime": 1780673469.3795,
+    "ast_hash": "49f1d68a1af762053c06db9fdd95dec0",
+    "semantic_hash": "49f1d68a1af762053c06db9fdd95dec0"
+  },
+  "education/study_abroad_gap_analysis_v2.md": {
+    "mtime": 1780925841.9526155,
+    "ast_hash": "a9a8322fda32f272c0fbf0a5ca08cd78",
+    "semantic_hash": "a9a8322fda32f272c0fbf0a5ca08cd78"
+  },
+  "education/swiss_finance_masters_2027.html": {
+    "mtime": 1779616698.4455285,
+    "ast_hash": "c9f52752c1163ce0fd23f4218dcc1501",
+    "semantic_hash": "c9f52752c1163ce0fd23f4218dcc1501"
+  },
+  "nomad/advanced_nomad_systems_2026.md": {
+    "mtime": 1780405105.7306771,
+    "ast_hash": "43d948e56e82ebf35819f4e5e3487937",
+    "semantic_hash": "43d948e56e82ebf35819f4e5e3487937"
+  },
+  "nomad/ai_ds_digital_nomad_roadmap_2026.md": {
+    "mtime": 1779871706.8413384,
+    "ast_hash": "dcac5d41b93e25c465ad7b384fc92ec3",
+    "semantic_hash": "dcac5d41b93e25c465ad7b384fc92ec3"
+  },
+  "nomad/ai_nomad_unexplored_dimensions_2026.md": {
+    "mtime": 1780405118.2906098,
+    "ast_hash": "5bda45475895093891456a37a2d6410b",
+    "semantic_hash": "5bda45475895093891456a37a2d6410b"
+  },
+  "nomad/comprehensive_digital_nomad_ai_series.md": {
+    "mtime": 1780587149.942005,
+    "ast_hash": "774090c563b51ce1c5bfdadf2efe0380",
+    "semantic_hash": "774090c563b51ce1c5bfdadf2efe0380"
+  },
+  "nomad/digital_nomad_ai_series_master_summary.md": {
+    "mtime": 1780584798.4131076,
+    "ast_hash": "6ec8364bf0b6aec71d8e6293deacf7f7",
+    "semantic_hash": "6ec8364bf0b6aec71d8e6293deacf7f7"
+  },
+  "resources/career-roadmap-checklist.md": {
+    "mtime": 1779622709.510846,
+    "ast_hash": "297f10e30079419a323e2247c8042f95",
+    "semantic_hash": "297f10e30079419a323e2247c8042f95"
+  },
+  "resources/career_roadmap_checklist_differentiated.md": {
+    "mtime": 1780406752.5004091,
+    "ast_hash": "29224930a23d13544ceb5f8babc10ed8",
+    "semantic_hash": "29224930a23d13544ceb5f8babc10ed8"
+  },
+  "resources/free_resources_roadmap.md": {
+    "mtime": 1779610911.9560988,
+    "ast_hash": "617df9b9ab30b88c67a7f966f1787c52",
+    "semantic_hash": "617df9b9ab30b88c67a7f966f1787c52"
+  },
+  "resources/notebooklm-compatible-resources.md": {
+    "mtime": 1779870017.4540613,
+    "ast_hash": "2ecf1b9cff9fadbcc5f26d75114688a6",
+    "semantic_hash": "2ecf1b9cff9fadbcc5f26d75114688a6"
+  },
+  "resources/roadmap_differentiated_tracks.md": {
+    "mtime": 1780405170.3764672,
+    "ast_hash": "2e1c5c53e7c2b3f1bac4015d6b430dc4",
+    "semantic_hash": "2e1c5c53e7c2b3f1bac4015d6b430dc4"
+  },
+  "resources/tools-master-list.md": {
+    "mtime": 1780497111.490527,
+    "ast_hash": "3a02eec86eb02b95b8e06ea3db5a7487",
+    "semantic_hash": "3a02eec86eb02b95b8e06ea3db5a7487"
+  },
+  "resources/youtube-roadmap-deduplicated.md": {
+    "mtime": 1780497106.8472505,
+    "ast_hash": "df1314c71b656df14959e692765138f3",
+    "semantic_hash": "df1314c71b656df14959e692765138f3"
+  },
+  "side hustle/AI_Freelance_Master_Plan.md": {
+    "mtime": 1780763719.931091,
+    "ast_hash": "16ae2cb1b61b82c6e2ed1df4ff8152be",
+    "semantic_hash": "16ae2cb1b61b82c6e2ed1df4ff8152be"
+  },
+  "side hustle/ai_freelance_roadmap.html": {
+    "mtime": 1780584588.0913181,
+    "ast_hash": "b469163b5cb5485bb296d0ae91058bec",
+    "semantic_hash": "b469163b5cb5485bb296d0ae91058bec"
+  },
+  "side hustle/complete-freelancing-blueprint.md": {
+    "mtime": 1780552965.2656598,
+    "ast_hash": "9955daab98a9ed4ae806b51133774c06",
+    "semantic_hash": "9955daab98a9ed4ae806b51133774c06"
+  },
+  "side hustle/comprehensive-side-hustle-master-guide.md": {
+    "mtime": 1780585828.9885793,
+    "ast_hash": "84dc5f16fce41541f7c0b9f91b0d97db",
+    "semantic_hash": "84dc5f16fce41541f7c0b9f91b0d97db"
+  },
+  "side hustle/content_calendar_3months.html": {
+    "mtime": 1780763745.7465255,
+    "ast_hash": "821ad576dae6c33a1b1ea22495bca403",
+    "semantic_hash": "821ad576dae6c33a1b1ea22495bca403"
+  },
+  "side hustle/freelancing-blueprint.md": {
+    "mtime": 1780486811.0261395,
+    "ast_hash": "f11f99f5932554a50056831fd2e15fe6",
+    "semantic_hash": "f11f99f5932554a50056831fd2e15fe6"
+  },
+  "side hustle/freelancing-roadmap.md": {
+    "mtime": 1780486817.1821487,
+    "ast_hash": "5d0ee2a9d3baacf3420b6efef10ca739",
+    "semantic_hash": "5d0ee2a9d3baacf3420b6efef10ca739"
+  },
+  "side hustle/nexora_content_strategy.md": {
+    "mtime": 1780584577.0858395,
+    "ast_hash": "6ec98cf6d8f205fc5d1161db95a32786",
+    "semantic_hash": "6ec98cf6d8f205fc5d1161db95a32786"
+  },
+  "side hustle/nexora_implementation_plan.md": {
+    "mtime": 1780763644.5779145,
+    "ast_hash": "f35f33fda5e618cf244ef2a6f0d51808",
+    "semantic_hash": "f35f33fda5e618cf244ef2a6f0d51808"
+  },
+  "side hustle/passive-income-student-blueprint.md": {
+    "mtime": 1780552969.760677,
+    "ast_hash": "5431306135611ba59f89939bb9ee1faa",
+    "semantic_hash": "5431306135611ba59f89939bb9ee1faa"
+  },
+  "AI system/README.md": {
+    "mtime": 1781182802.2616682,
+    "ast_hash": "be4aa75a69f1d2acc44ba9ae2b4b6ce8",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1781187370.5295155,
+    "ast_hash": "045fefefaf49ff4b141c4ce6d36a80cc",
+    "semantic_hash": ""
+  },
+  "careers/README.md": {
+    "mtime": 1781185766.228986,
+    "ast_hash": "17e87c240667c7404ffbf3a0acd44686",
+    "semantic_hash": ""
+  },
+  "education/README.md": {
+    "mtime": 1781185779.9010527,
+    "ast_hash": "61e8c5b0b4523abf9a0c23a08c40d3a2",
+    "semantic_hash": ""
+  },
+  "nomad/README.md": {
+    "mtime": 1781185792.5220556,
+    "ast_hash": "98834c2f10f789a97897e9d00a29c111",
+    "semantic_hash": ""
+  },
+  "resources/README.md": {
+    "mtime": 1781185806.156304,
+    "ast_hash": "b46bd5593c136a8e1417f1cadf848d1b",
+    "semantic_hash": ""
+  },
+  "side hustle/README.md": {
+    "mtime": 1781185820.89685,
+    "ast_hash": "06585e325325fe4e0be9d3b020bceae8",
+    "semantic_hash": ""
+  }
+}

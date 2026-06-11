@@ -1,0 +1,53 @@
+P:\Project\INFO\scripts\sync_notion_roadmap.py
+P:\Project\INFO\AI system\AI_Agent_OS_Roadmap.md
+P:\Project\INFO\AI system\AI_OS_Complete_Toolkit_Guide.md
+P:\Project\INFO\AI system\PAIOS_6Week_Project_Roadmap.md
+P:\Project\INFO\AI system\PAIOS_YouTube_Roadmap.md
+P:\Project\INFO\AI system\ai_agent_os_8week_roadmap.md
+P:\Project\INFO\AI system\free-ai-models-comprehensive-2026.md
+P:\Project\INFO\AI system\free-ai-models-guide-2026.md
+P:\Project\INFO\AI system\free-cloud-ai-models-2026.md
+P:\Project\INFO\AI system\personal-ai-os-architecture.md
+P:\Project\INFO\README.md
+P:\Project\INFO\careers\global_careers_comparison.md
+P:\Project\INFO\careers\swiss_ai_ds_vs_alternatives.md
+P:\Project\INFO\careers\swiss_quant_vs_ai_ds_careers.md
+P:\Project\INFO\careers\top4_qol_inr_comparison.md
+P:\Project\INFO\companies\swiss_quant_ai_companies.html
+P:\Project\INFO\companies\swiss_quant_ai_companies_guide.html
+P:\Project\INFO\companies\swiss_quant_ai_companies_profiles.md
+P:\Project\INFO\companies\swiss_quant_ai_companies_table.md
+P:\Project\INFO\education\AI_DataScience_International_Student_Comparison.md
+P:\Project\INFO\education\AI_Masters_Global_Guide_Fall2027.md
+P:\Project\INFO\education\Comprehensive_Global_Education_Guide_2027.md
+P:\Project\INFO\education\Masters_Finance_FinTech_AI_Quant_2027_Guide.md
+P:\Project\INFO\education\india_education_loan_abroad_guide.md
+P:\Project\INFO\education\international_study_comparison.md
+P:\Project\INFO\education\project_based_learning_roadmap_prompt_template.md
+P:\Project\INFO\education\study_abroad_comprehensive_plan.md
+P:\Project\INFO\education\study_abroad_gap_analysis.md
+P:\Project\INFO\education\study_abroad_gap_analysis_advanced.md
+P:\Project\INFO\education\study_abroad_gap_analysis_v2.md
+P:\Project\INFO\education\swiss_finance_masters_2027.html
+P:\Project\INFO\nomad\advanced_nomad_systems_2026.md
+P:\Project\INFO\nomad\ai_ds_digital_nomad_roadmap_2026.md
+P:\Project\INFO\nomad\ai_nomad_unexplored_dimensions_2026.md
+P:\Project\INFO\nomad\comprehensive_digital_nomad_ai_series.md
+P:\Project\INFO\nomad\digital_nomad_ai_series_master_summary.md
+P:\Project\INFO\resources\career-roadmap-checklist.md
+P:\Project\INFO\resources\career_roadmap_checklist_differentiated.md
+P:\Project\INFO\resources\free_resources_roadmap.md
+P:\Project\INFO\resources\notebooklm-compatible-resources.md
+P:\Project\INFO\resources\roadmap_differentiated_tracks.md
+P:\Project\INFO\resources\tools-master-list.md
+P:\Project\INFO\resources\youtube-roadmap-deduplicated.md
+P:\Project\INFO\side hustle\AI_Freelance_Master_Plan.md
+P:\Project\INFO\side hustle\ai_freelance_roadmap.html
+P:\Project\INFO\side hustle\complete-freelancing-blueprint.md
+P:\Project\INFO\side hustle\comprehensive-side-hustle-master-guide.md
+P:\Project\INFO\side hustle\content_calendar_3months.html
+P:\Project\INFO\side hustle\freelancing-blueprint.md
+P:\Project\INFO\side hustle\freelancing-roadmap.md
+P:\Project\INFO\side hustle\nexora_content_strategy.md
+P:\Project\INFO\side hustle\nexora_implementation_plan.md
+P:\Project\INFO\side hustle\passive-income-student-blueprint.md
