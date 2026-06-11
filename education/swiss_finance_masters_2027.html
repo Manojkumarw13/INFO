@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiss Finance & FinTech Masters Guide — Fall 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d1117;
+    --paper: #f5f0e8;
+    --cream: #ede7d5;
+    --red: #c0392b;
+    --gold: #b8860b;
+    --muted: #6b6356;
+    --border: #c8bfaa;
+    --stripe: #e8e0ce;
+    --white: #fff;
+    --col1: #1a3a5c;
+    --col2: #7b3f00;
+    --col3: #1a5c3a;
+    --col4: #5c1a4a;
+    --col5: #3a1a5c;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 56px 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--red), var(--gold), #2e86ab);
+  }
+  .masthead-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .masthead h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
+  .masthead h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .masthead-sub {
+    font-size: 14px;
+    color: #a8a09a;
+    max-width: 560px;
+    border-left: 2px solid var(--red);
+    padding-left: 14px;
+  }
+  .masthead-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--paper);
+  }
+
+  /* LAYOUT */
+  .container { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  .toc {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .toc-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+  .toc a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 14px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    display: block;
+  }
+  .toc a:hover { color: var(--red); border-bottom-color: var(--red); }
+
+  /* SECTIONS */
+  .section { padding: 60px 0; }
+  .section + .section { border-top: 1px solid var(--border); }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+
+  /* PROGRAM CARDS */
+  .programs-grid { display: flex; flex-direction: column; gap: 40px; }
+
+  .prog-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    border-left: 5px solid var(--col1);
+  }
+  .prog-card:nth-child(2) { border-left-color: var(--col2); }
+  .prog-card:nth-child(3) { border-left-color: var(--col3); }
+  .prog-card:nth-child(4) { border-left-color: var(--col4); }
+  .prog-card:nth-child(5) { border-left-color: var(--col5); }
+
+  .prog-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--stripe);
+  }
+  .prog-uni {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .prog-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .prog-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .badge-blue { background: #dbeafe; color: #1e3a8a; }
+  .badge-green { background: #dcfce7; color: #14532d; }
+  .badge-amber { background: #fef3c7; color: #78350f; }
+  .badge-purple { background: #f3e8ff; color: #4a1d96; }
+  .badge-red { background: #fee2e2; color: #7f1d1d; }
+
+  .prog-body { padding: 24px 28px; display: grid; gap: 24px; }
+  .prog-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 640px) { .prog-grid-2 { grid-template-columns: 1fr; } }
+
+  .prog-section-head {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .prog-section-text {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  ul.bullet-list {
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  ul.bullet-list li { margin-bottom: 2px; }
+  .highlight-val {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .fee-block {
+    background: var(--stripe);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 14px 16px;
+  }
+  .fee-block .fee-main {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+  }
+  .fee-block .fee-inr {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .fee-note { font-size: 12px; color: var(--muted); margin-top: 6px; font-style: italic; }
+
+  .deadline-box {
+    background: #fff8ed;
+    border: 1px solid #f5d97a;
+    border-radius: 2px;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  .deadline-box strong { color: #78350f; }
+
+  .unverified-note {
+    background: #fff1f2;
+    border: 1px solid #fca5a5;
+    border-radius: 2px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #7f1d1d;
+    font-family: 'DM Mono', monospace;
+    margin-top: 8px;
+  }
+
+  /* COMPARISON TABLE */
+  .table-wrapper { overflow-x: auto; margin-top: 8px; }
+  table.comparison {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 700px;
+  }
+  table.comparison thead tr {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  table.comparison thead th {
+    padding: 12px 14px;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  table.comparison tbody tr:nth-child(odd) { background: var(--white); }
+  table.comparison tbody tr:nth-child(even) { background: var(--stripe); }
+  table.comparison tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  table.comparison tbody td:first-child {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .dot-hard { color: var(--red); font-weight: 700; }
+  .dot-mid { color: var(--gold); font-weight: 700; }
+  .dot-easy { color: #16a34a; font-weight: 700; }
+
+  /* TIPS */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .tip-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 2px;
+    position: relative;
+  }
+  .tip-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--border);
+    position: absolute;
+    top: 8px; right: 16px;
+    line-height: 1;
+  }
+  .tip-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding-right: 30px;
+  }
+  .tip-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: #f0f4ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 2px;
+    padding: 20px 24px;
+    font-size: 13px;
+    color: #1e3a8a;
+    margin-top: 8px;
+    line-height: 1.65;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: var(--muted);
+    padding: 28px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media print {
+    .toc { display: none; }
+    .section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-label">Research Guide · Swiss Higher Education</div>
+  <h1>Master's in Finance, FinTech &amp; Quant Finance<br><em>Switzerland</em> — Fall 2027 Intake</h1>
+  <p class="masthead-sub">English-taught graduate programs combining AI, Machine Learning, and Financial Engineering at Switzerland's leading universities. Compiled from official university sources.</p>
+  <div class="masthead-meta">
+    <span class="meta-pill">5 Programs Profiled</span>
+    <span class="meta-pill">4 Universities</span>
+    <span class="meta-pill">Verified: May 2026</span>
+    <span class="meta-pill">Target: Fall 2027 Start</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#programs">Programs</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#tips">Tips for Indians</a>
+    <a href="#disclaimer">Disclaimer</a>
+  </div>
+</nav>
+
+<!-- PROGRAMS SECTION -->
+<div id="programs" class="section">
+  <div class="container">
+    <div class="section-label">The Programs</div>
+    <div class="section-title">Five Programs Worth Knowing</div>
+
+    <div class="programs-grid">
+
+      <!-- CARD 1: ETH / UZH MScQF -->
+      <div class="prog-card">
+        <div class="prog-header">
+          <div>
+            <div class="prog-uni">ETH Zurich + University of Zurich · Zurich</div>
+            <div class="prog-name">MSc in Quantitative Finance (MScQF)</div>
+          </div>
+          <div class="prog-badges">
+            <span class="badge badge-blue">Quantitative Finance</span>
+            <span class="badge badge-green">English</span>
+            <span class="badge badge-amber">#1 Europe · #4 World</span>
+          </div>
+        </div>
+        <div class="prog-body">
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Overview</div>
+              <div class="prog-section-text">
+                A joint program offered by the Department of Finance (UZH) and the Department of Mathematics (ETH Zurich). Ranked <strong>#1 in Europe and #4 worldwide</strong> by RiskNet Quant Finance Master's Guide 2026. Combines economic theory, financial markets, and rigorous mathematical methods (probability, statistics, numerical analysis). FinTech topics are embedded across several lectures. The program is run by world-class academics and leading financial practitioners, with strong industry ties to the Zurich financial hub (banks, insurance, consulting firms).
+              </div>
+            </div>
+            <div>
+              <div class="prog-section-head">Quick Facts</div>
+              <ul class="bullet-list">
+                <li><span class="highlight-val">Duration:</span> ~1.5 years (2 semesters coursework + Master's thesis)</li>
+                <li><span class="highlight-val">Language:</span> 100% English</li>
+                <li><span class="highlight-val">Degree Awarded:</span> MSc ETH UZH (joint)</li>
+                <li><span class="highlight-val">Credits:</span> 90 ECTS</li>
+                <li><span class="highlight-val">Location:</span> Zurich (dual campus)</li>
+                <li><span class="highlight-val">Start:</span> Mid-September (Fall only)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Key AI / Quant Finance Courses</div>
+              <ul class="bullet-list">
+                <li>Probability Theory &amp; Statistics for Finance</li>
+                <li>Stochastic Calculus &amp; Numerical Methods</li>
+                <li>Asset Management &amp; Risk Management</li>
+                <li>Financial Econometrics &amp; Big Data</li>
+                <li>FinTech electives (multiple lectures)</li>
+                <li>Machine Learning applications in finance (via ETH electives)</li>
+              </ul>
+            </div>
+            <div>
+              <div class="prog-section-head">Admission Requirements</div>
+              <ul class="bullet-list">
+                <li>Bachelor's from state-accredited university</li>
+                <li>Background in economics, finance, mathematics, physics, engineering or data science</li>
+                <li>English proficiency: C1 (IELTS ~7.0 / TOEFL ~100)</li>
+                <li>Programming: at least one language (Julia, Python, R, or Matlab)</li>
+                <li>Strong background in probability, statistics &amp; linear algebra</li>
+                <li>Very competitive admission — no entitlement to admission</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Tuition Fees</div>
+              <div class="fee-block">
+                <div class="fee-main">~CHF 900 / semester</div>
+                <div class="fee-inr">≈ ₹83,700 / semester · ~₹2.5 L total</div>
+              </div>
+              <div class="fee-note">CHF 800 tuition + CHF 100 international surcharge per semester. Total program: ~CHF 2,700 (plus application fee CHF 200 + enrollment CHF 150 for foreign). One of the most affordable elite quant finance programs globally.</div>
+            </div>
+            <div>
+              <div class="prog-section-head">Deadlines — Fall 2027</div>
+              <div class="deadline-box">
+                <strong>Application opens:</strong> November 2026<br>
+                <strong>Deadline:</strong> 15 January 2027<br>
+                <em>No late applications accepted. No spring intake.</em>
+              </div>
+              <div class="prog-section-head" style="margin-top:16px">Scholarships</div>
+              <ul class="bullet-list">
+                <li>ETH Excellence Scholarship &amp; Opportunity Programme</li>
+                <li>ESOP fellowships (CHF 12,000 + waiver)</li>
+                <li>Zurich Quantitative Finance Alumni events &amp; networking</li>
+                <li>Industry events with UBS, Credit Suisse, Zurich Insurance, etc.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: EPFL MFE -->
+      <div class="prog-card">
+        <div class="prog-header">
+          <div>
+            <div class="prog-uni">EPFL École Polytechnique Fédérale de Lausanne · Lausanne</div>
+            <div class="prog-name">MSc in Financial Engineering (MFE)</div>
+          </div>
+          <div class="prog-badges">
+            <span class="badge badge-purple">Financial Engineering</span>
+            <span class="badge badge-green">English</span>
+            <span class="badge badge-amber">QS #36 World</span>
+          </div>
+        </div>
+        <div class="prog-body">
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Overview</div>
+              <div class="prog-section-text">
+                A multidisciplinary program offered by EPFL's College of Management of Technology in partnership with the <strong>Swiss Finance Institute</strong>. Faculty spans mathematics, statistics, computer science, operations research and communications. The curriculum integrates cutting-edge machine learning techniques with classical quantitative finance methods. The program concludes with a <strong>6-month industry internship at leading firms</strong> like Pictet, Julius Bär, UBS, and Mercuria, providing hands-on experience and hiring connections. 92% full-time employment within 1 year of graduation.
+              </div>
+            </div>
+            <div>
+              <div class="prog-section-head">Quick Facts</div>
+              <ul class="bullet-list">
+                <li><span class="highlight-val">Duration:</span> 2 years (120 ECTS — 3 semesters coursework + 6-month internship)</li>
+                <li><span class="highlight-val">Language:</span> 100% English</li>
+                <li><span class="highlight-val">Degree:</span> MSc EPFL</li>
+                <li><span class="highlight-val">Location:</span> Lausanne (between Geneva &amp; Zurich)</li>
+                <li><span class="highlight-val">Start:</span> Mid-September</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Key AI / Quant Finance Courses</div>
+              <ul class="bullet-list">
+                <li>Machine Learning in Finance</li>
+                <li>Stochastic Calculus</li>
+                <li>Derivatives Pricing</li>
+                <li>Quantitative Risk Management</li>
+                <li>Data Science &amp; Statistical Inference</li>
+                <li>Optimization &amp; Numerical Methods</li>
+                <li>Interest Rate Models</li>
+                <li>Electives: Deep Learning, Big Data</li>
+              </ul>
+            </div>
+            <div>
+              <div class="prog-section-head">Admission Requirements</div>
+              <ul class="bullet-list">
+                <li>Bachelor's in Mathematics, Physics, CS, Engineering, or Economics</li>
+                <li>Strong foundation: analysis, linear algebra, probability, statistics</li>
+                <li>Programming: C/C++/Python/Java or Matlab/Mathematica</li>
+                <li>English proficiency required (spoken and written)</li>
+                <li>3 letters of recommendation (from professors)</li>
+                <li>Motivation letter</li>
+                <li>Transcripts + GPA (competitive)</li>
+                <li>Swiss UAS (FHS/HES) degree holders are NOT eligible</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Tuition Fees</div>
+              <div class="fee-block">
+                <div class="fee-main">CHF 2,190 / semester</div>
+                <div class="fee-inr">≈ ₹2.04 L / semester · ~₹8.1 L total</div>
+              </div>
+              <div class="fee-note">Since Fall 2025, tuition tripled for non-resident students (from CHF 730 to CHF 2,190/semester). EPFL offers a transitional allowance of CHF 1,460/semester paid out over the first 3–4 semesters to ease the transition. Application fee: CHF 0 for EPFL bachelor students; standard fee for others.</div>
+              <div class="unverified-note">⚠ NOTE: Confirm the exact fee for Fall 2027 directly at epfl.ch, as EPFL's fee revision is recent and may adjust further.</div>
+            </div>
+            <div>
+              <div class="prog-section-head">Deadlines — Fall 2027</div>
+              <div class="deadline-box">
+                <strong>Early / Visa deadline:</strong> 15 December 2026<br>
+                <strong>Final deadline:</strong> 31 March 2027<br>
+                <em>Decisions: early April (Dec deadline) or end of June (March deadline). Visa applicants strongly advised to use December deadline.</em>
+              </div>
+              <div class="prog-section-head" style="margin-top:16px">Scholarships</div>
+              <ul class="bullet-list">
+                <li>EPFL Excellence Fellowship — ~CHF 50,000+/year (covers tuition &amp; living; top ~5% of admits)</li>
+                <li>Swiss Government Excellence Scholarships</li>
+                <li>Industry project sponsorships during internship</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: USI MSc Finance -->
+      <div class="prog-card">
+        <div class="prog-header">
+          <div>
+            <div class="prog-uni">USI Università della Svizzera italiana · Lugano</div>
+            <div class="prog-name">MSc in Finance (with Digital Finance / FinTech Track)</div>
+          </div>
+          <div class="prog-badges">
+            <span class="badge badge-green">Finance + FinTech</span>
+            <span class="badge badge-green">English</span>
+            <span class="badge badge-blue">SFI Accredited</span>
+          </div>
+        </div>
+        <div class="prog-body">
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Overview</div>
+              <div class="prog-section-text">
+                A top-ranked, English-taught program coordinated with the <strong>Swiss Finance Institute (SFI)</strong>. Students choose between three specialisations: <strong>Banking &amp; Finance</strong>, <strong>Quantitative Finance</strong>, and the recently introduced <strong>Digital Finance</strong> track. The Digital Finance track covers Blockchain, Machine Learning, robo-advising, and FinTech innovation. Strong industry links with Geneva and Zurich finance circles, plus proximity to Milan's financial sector. Overall employment rate: 96.2%. Ranked in the FT top-tier for European finance programs.
+              </div>
+            </div>
+            <div>
+              <div class="prog-section-head">Quick Facts</div>
+              <ul class="bullet-list">
+                <li><span class="highlight-val">Duration:</span> 18 months (core) or 24 months (with internship/thesis)</li>
+                <li><span class="highlight-val">Language:</span> 100% English</li>
+                <li><span class="highlight-val">Credits:</span> 90 or 120 ECTS</li>
+                <li><span class="highlight-val">Location:</span> Lugano, Ticino</li>
+                <li><span class="highlight-val">Start:</span> September</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Key AI / FinTech Courses (Digital Finance Track)</div>
+              <ul class="bullet-list">
+                <li>Blockchain &amp; Distributed Ledger Technology</li>
+                <li>Machine Learning in Finance</li>
+                <li>Robo-Advising &amp; Algorithmic Portfolio Management</li>
+                <li>Digital Asset Management</li>
+                <li>FinTech Startups &amp; Innovation</li>
+                <li>Quantitative Finance (core: stochastic calculus, derivatives)</li>
+              </ul>
+            </div>
+            <div>
+              <div class="prog-section-head">Admission Requirements</div>
+              <ul class="bullet-list">
+                <li>Bachelor's in Economics or related discipline (min. 180 ECTS)</li>
+                <li>Adequate preparation in economics &amp; quantitative subjects</li>
+                <li>English: IELTS / TOEFL / Cambridge / TOEIC (valid, ≤3 years)</li>
+                <li>Application fee: CHF 100 (non-refundable)</li>
+                <li>Online application required</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Tuition Fees</div>
+              <div class="fee-block">
+                <div class="fee-main">CHF 4,000 / semester</div>
+                <div class="fee-inr">≈ ₹3.72 L / semester · ~₹22 L total (2 yrs)</div>
+              </div>
+              <div class="fee-note">CHF 2,000/semester for students with prior Swiss/Liechtenstein legal residence. Total for 4 semesters: CHF 16,000 (international rate).</div>
+            </div>
+            <div>
+              <div class="prog-section-head">Deadlines — Fall 2027</div>
+              <div class="deadline-box">
+                <strong>Applications open:</strong> September 14, 2026<br>
+                <strong>Deadline:</strong> Check usi.ch (typically March/April for Fall intake)<br>
+                <em>USI confirmed the Fall 2027 application window opens Sept 2026; specific closing deadline to be published on usi.ch/en/education/master/finance.</em>
+              </div>
+              <div class="unverified-note">⚠ Exact Fall 2027 deadline: verify at usi.ch — typically late March for non-EU students needing visas.</div>
+              <div class="prog-section-head" style="margin-top:16px">Scholarships</div>
+              <ul class="bullet-list">
+                <li>USI Foundation Scholarships — CHF 4,000 one-off awards (60 per year)</li>
+                <li>Swiss Government Excellence Scholarships</li>
+                <li>SFI PhD &amp; fellowship pathways for top students</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: USI MScFTC -->
+      <div class="prog-card">
+        <div class="prog-header">
+          <div>
+            <div class="prog-uni">USI Università della Svizzera italiana · Lugano</div>
+            <div class="prog-name">MSc in Financial Technology and Computing (MScFTC)</div>
+          </div>
+          <div class="prog-badges">
+            <span class="badge badge-purple">FinTech + CS</span>
+            <span class="badge badge-green">English</span>
+            <span class="badge badge-blue">SFI Accredited</span>
+          </div>
+        </div>
+        <div class="prog-body">
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Overview</div>
+              <div class="prog-section-text">
+                A unique joint program between USI's Faculty of <strong>Informatics</strong> and Faculty of <strong>Economics</strong>. The most directly CS+Finance hybrid program in Switzerland. Accredited by the Swiss Finance Institute. Offers two tracks: <em>Advanced Informatics</em> (for CS backgrounds) and <em>Core Informatics</em> (for other backgrounds). Career paths span FinTech startups, banks, hedge funds, and insurers. The 4th semester involves a master thesis in a research group or applied company project via USI's FinTech Laboratory.
+              </div>
+            </div>
+            <div>
+              <div class="prog-section-head">Quick Facts</div>
+              <ul class="bullet-list">
+                <li><span class="highlight-val">Duration:</span> 2 years (120 ECTS, 4 semesters)</li>
+                <li><span class="highlight-val">Language:</span> 100% English</li>
+                <li><span class="highlight-val">Location:</span> Lugano, Ticino</li>
+                <li><span class="highlight-val">Tracks:</span> Advanced Informatics OR Core Informatics</li>
+                <li><span class="highlight-val">Start:</span> September</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Key AI / Computing Courses</div>
+              <ul class="bullet-list">
+                <li>Machine Learning &amp; Deep Learning in Finance</li>
+                <li>Algorithmic Trading &amp; Algo Asset Management</li>
+                <li>Cryptocurrencies &amp; Blockchain Systems</li>
+                <li>Distributed Algorithms &amp; Software Performance</li>
+                <li>Advanced Derivatives &amp; Financial Engineering</li>
+                <li>Robo-Advising &amp; Personalized Finance</li>
+                <li>Fixed Income &amp; Risk Modelling</li>
+                <li>FinTech Lab Thesis Project</li>
+              </ul>
+            </div>
+            <div>
+              <div class="prog-section-head">Admission Requirements</div>
+              <ul class="bullet-list">
+                <li><em>Advanced track:</em> Bachelor's in CS, Computer Engineering, or related</li>
+                <li><em>Core track:</em> Bachelor's in any field with adequate quantitative/programming background</li>
+                <li>Min. 180 ECTS from recognized institution</li>
+                <li>English: IELTS / TOEFL / Cambridge / TOEIC (≤3 years old)</li>
+                <li>Application fee: CHF 100</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Tuition Fees</div>
+              <div class="fee-block">
+                <div class="fee-main">CHF 4,000 / semester</div>
+                <div class="fee-inr">≈ ₹3.72 L / semester · ~₹29.8 L total (4 sem)</div>
+              </div>
+              <div class="fee-note">Same fee structure as other USI master programs. CHF 16,000 total for international students over the 2-year program. Reduced rate of CHF 2,000/semester applies only to students with Swiss/Liechtenstein prior residence.</div>
+            </div>
+            <div>
+              <div class="prog-section-head">Deadlines — Fall 2027</div>
+              <div class="deadline-box">
+                <strong>Applications open:</strong> September 14, 2026<br>
+                <strong>Deadline:</strong> Check usi.ch/en/education/master/financial-technology-and-computing<br>
+                <em>Exact Fall 2027 deadline TBC on official site.</em>
+              </div>
+              <div class="unverified-note">⚠ Verify deadline directly at usi.ch — especially for visa-requiring applicants who need earlier submission.</div>
+              <div class="prog-section-head" style="margin-top:16px">Notable Features</div>
+              <ul class="bullet-list">
+                <li>USI FinTech Laboratory collaboration</li>
+                <li>SFI accreditation opens doors to SFI network</li>
+                <li>Strong alumni in Swiss and Italian banking &amp; tech sectors</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: HSG MBF -->
+      <div class="prog-card">
+        <div class="prog-header">
+          <div>
+            <div class="prog-uni">University of St. Gallen (HSG) · St. Gallen</div>
+            <div class="prog-name">M.A. HSG in Banking and Finance (MBF)</div>
+          </div>
+          <div class="prog-badges">
+            <span class="badge badge-amber">Banking &amp; Finance</span>
+            <span class="badge badge-green">English</span>
+            <span class="badge badge-red">FT #11 Global · #1 Switzerland</span>
+          </div>
+        </div>
+        <div class="prog-body">
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Overview</div>
+              <div class="prog-section-text">
+                The highest-ranked finance program in Switzerland by the FT Masters in Finance Ranking 2024 (#11 globally). Offered by one of Europe's leading business universities, the MBF equips students with both financial theory and quantitative methods. Industry partners include <strong>UBS and Zürcher Kantonalbank (ZKB)</strong>, who award fellowships and prizes. Top employers: McKinsey, BCG, Bain, UBS, JP Morgan, Goldman Sachs, Deutsche Bank, LGT, Oliver Wyman, PwC. The program is taught in English, though 70–80% of the cohort speaks German. Language courses are required alongside studies.
+              </div>
+            </div>
+            <div>
+              <div class="prog-section-head">Quick Facts</div>
+              <ul class="bullet-list">
+                <li><span class="highlight-val">Duration:</span> 18 months (3 semesters, can be 2 semesters for top students)</li>
+                <li><span class="highlight-val">Language:</span> English (instruction); German helps socially</li>
+                <li><span class="highlight-val">Degree:</span> M.A. HSG</li>
+                <li><span class="highlight-val">Credits:</span> 90 ECTS</li>
+                <li><span class="highlight-val">Location:</span> St. Gallen (lower cost of living than Zurich/Geneva)</li>
+                <li><span class="highlight-val">Start:</span> September</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Key Finance / Quant Courses</div>
+              <ul class="bullet-list">
+                <li>Financial Markets (compulsory Sem 1)</li>
+                <li>Financial Institutions (compulsory Sem 1)</li>
+                <li>Quantitative Methods (compulsory Sem 1)</li>
+                <li>Asset Management &amp; Derivatives</li>
+                <li>Empirical Finance &amp; Big Data Analytics</li>
+                <li>Risk Management (elective)</li>
+                <li>Corporate Finance &amp; Valuation</li>
+                <li>Electives from HSG's broad course catalogue</li>
+              </ul>
+            </div>
+            <div>
+              <div class="prog-section-head">Admission Requirements</div>
+              <ul class="bullet-list">
+                <li>Bachelor's (recognized equivalent, same/similar major) with min. 180 ECTS</li>
+                <li>Strong academic background in economics or related field</li>
+                <li>GMAT or GRE score (significant weighting in selection — up to 60% of score)</li>
+                <li>IELTS / TOEFL / PTE / Duolingo required</li>
+                <li>Application fee: CHF 250</li>
+                <li>MBF Integration Days mandatory for admitted students</li>
+                <li>Accounting knowledge required (bridging exam if lacking)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prog-grid-2">
+            <div>
+              <div class="prog-section-head">Tuition Fees</div>
+              <div class="fee-block">
+                <div class="fee-main">~CHF 3,300 / semester</div>
+                <div class="fee-inr">≈ ₹3.07 L / semester · ~₹9.3 L total</div>
+              </div>
+              <div class="fee-note">Total program: ~CHF 9,987 for 3 semesters (non-Swiss/non-EU rate). One of the best value-for-money programs in European finance given the FT #11 ranking.</div>
+            </div>
+            <div>
+              <div class="prog-section-head">Deadlines — Fall 2027</div>
+              <div class="deadline-box">
+                <strong>Round 1:</strong> Submit by ~30 Nov 2026 → Decision ~24 Dec 2026<br>
+                <strong>Round 2:</strong> ~31 Jan 2027 → Decision ~28 Feb 2027<br>
+                <strong>Round 3:</strong> ~28 Feb 2027 → Decision ~31 Mar 2027<br>
+                <strong>Round 4:</strong> ~31 Mar 2027 → Decision ~30 Apr 2027<br>
+                <strong>Round 5:</strong> ~30 Apr 2027 → Decision ~31 May 2027
+              </div>
+              <div class="unverified-note">⚠ Exact 2027 round dates estimated from 2026 pattern. Confirm at unisg.ch/en/studying/admission/admission-master/banking-and-finance.</div>
+              <div class="prog-section-head" style="margin-top:16px">Scholarships</div>
+              <ul class="bullet-list">
+                <li>UBS &amp; ZKB Industry Fellowships (for top admitted students)</li>
+                <li>HSG Best Talents scholarship (EU/EFTA nationals; covers tuition + living)</li>
+                <li>Best Thesis &amp; Best Degree prizes at graduation</li>
+                <li>Visiting professors from top global universities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /programs-grid -->
+  </div>
+</div>
+
+<!-- COMPARISON TABLE -->
+<div id="comparison" class="section">
+  <div class="container">
+    <div class="section-label">Side by Side</div>
+    <div class="section-title">Comparison Table</div>
+    <div class="table-wrapper">
+      <table class="comparison">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>University</th>
+            <th>Duration</th>
+            <th>Total Fees (CHF)</th>
+            <th>~Total (INR)</th>
+            <th>Focus</th>
+            <th>AI/ML Content</th>
+            <th>Competitiveness</th>
+            <th>Key Strength</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MScQF</td>
+            <td>ETH Zurich + UZH</td>
+            <td>1.5 yrs</td>
+            <td>~CHF 2,700 total</td>
+            <td>~₹2.5 L</td>
+            <td>Quant Finance</td>
+            <td>FinTech lectures + ML electives</td>
+            <td><span class="dot-hard">●●●●●</span></td>
+            <td>#1 Europe ranking; cheapest elite program</td>
+          </tr>
+          <tr>
+            <td>MSc Financial Engineering</td>
+            <td>EPFL</td>
+            <td>2 yrs</td>
+            <td>~CHF 8,760 total</td>
+            <td>~₹8.1 L</td>
+            <td>Financial Engineering</td>
+            <td>ML in Finance + Data Science core</td>
+            <td><span class="dot-hard">●●●●●</span></td>
+            <td>6-month industry internship; #1 Swiss tech uni</td>
+          </tr>
+          <tr>
+            <td>MSc Finance (Digital Finance)</td>
+            <td>USI Lugano</td>
+            <td>18–24 months</td>
+            <td>CHF 12,000–16,000</td>
+            <td>~₹14–15 L</td>
+            <td>Finance + FinTech</td>
+            <td>Blockchain, ML, Robo-Advising track</td>
+            <td><span class="dot-mid">●●●○○</span></td>
+            <td>FT-ranked; SFI accredited; Lugano gateway to Italy</td>
+          </tr>
+          <tr>
+            <td>MSc FinTech &amp; Computing</td>
+            <td>USI Lugano</td>
+            <td>2 yrs</td>
+            <td>CHF 16,000</td>
+            <td>~₹14.9 L</td>
+            <td>FinTech + CS</td>
+            <td>Algo trading, Deep Learning, Crypto, Distributed Systems</td>
+            <td><span class="dot-mid">●●●○○</span></td>
+            <td>Best for CS+Finance combo; FinTech Lab thesis</td>
+          </tr>
+          <tr>
+            <td>M.A. Banking &amp; Finance (MBF)</td>
+            <td>HSG St. Gallen</td>
+            <td>18 months</td>
+            <td>~CHF 9,987</td>
+            <td>~₹9.3 L</td>
+            <td>Banking &amp; Finance</td>
+            <td>Quantitative Methods, Empirical Finance</td>
+            <td><span class="dot-hard">●●●●○</span></td>
+            <td>FT #11 World · #1 Switzerland; top employer network</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px; color:var(--muted); margin-top:12px; font-family:'DM Mono',monospace">
+      INR conversions at ~1 CHF = ₹93. Exchange rates fluctuate — verify at time of application.
+      Competitiveness: ●●●●● = most selective.
+    </p>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div id="tips" class="section">
+  <div class="container">
+    <div class="section-label">For International Applicants</div>
+    <div class="section-title">Tips for Indian Students Applying to Swiss Programs</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">01</div>
+        <div class="tip-title">Apply Early — Especially for Visas</div>
+        <div class="tip-body">Switzerland's Type D National Visa takes 8–12 weeks to process. For ETH/UZH, the sole deadline is January 15 — missing it means waiting a full year. For EPFL, the December 15 deadline is strongly recommended for non-EU students. Start your application 3–4 months before deadlines.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">02</div>
+        <div class="tip-title">Build a Strong Quantitative Profile</div>
+        <div class="tip-body">All five programs are math-heavy. IIT / NIT / BITS students with strong CGPA (8.0+ preferred) in engineering, mathematics, or CS have competitive profiles. Courses in probability, statistics, linear algebra, and at least one programming language are essential prerequisites.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">03</div>
+        <div class="tip-title">GMAT/GRE — Only for HSG</div>
+        <div class="tip-body">The HSG MBF explicitly weights GMAT/GRE scores heavily (up to 60% of the selection score). ETH/UZH and EPFL do not require GMAT/GRE, but a strong score can still support your application. Focus on GRE Quant (160+) if applying to HSG.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">04</div>
+        <div class="tip-title">English Proficiency Matters</div>
+        <div class="tip-body">A C1-level certificate is required for most programs. Accepted tests: IELTS (7.0+), TOEFL iBT (100+), Cambridge C1/C2. UZH requires the certificate before final matriculation, even if not during pre-selection. Don't submit an expired certificate (USI requires ≤3 years validity).</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">05</div>
+        <div class="tip-title">Plan Finances Carefully</div>
+        <div class="tip-body">Switzerland is expensive. Monthly living costs in Zurich/Lausanne: CHF 1,800–2,500 (₹1.67–2.3 L). St. Gallen and Lugano are 20–30% cheaper. Budget CHF 25,000–30,000/year total. Open a blocked bank account for your visa application showing proof of funds before arrival.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">06</div>
+        <div class="tip-title">Chase Scholarships Actively</div>
+        <div class="tip-body">The EPFL Excellence Fellowship (CHF 50,000+/year) is transformative but highly competitive. Also explore: Swiss Government Excellence Scholarships (apply via Education India portal), Inlaks Shivdasani Foundation (India), DAAD (for Europe), and Tata / industry scholarships. Apply simultaneously.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">07</div>
+        <div class="tip-title">Motivation Letter is Critical</div>
+        <div class="tip-body">Swiss universities don't require standardized essays but take motivation letters seriously. Articulate clearly: why this specific program (not just "Switzerland"), your research/finance interests, relevant projects or internships, and how the program fits your 5-year plan. Avoid generic templates.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">08</div>
+        <div class="tip-title">Learn Basic German or Italian</div>
+        <div class="tip-body">While all 5 programs are taught in English, daily life in Zurich and St. Gallen is largely German-speaking. Lugano is Italian-speaking. Even basic A2-level proficiency opens doors to job fairs, local networking, and housing. USI even offers a free Italian course for enrolled students.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">09</div>
+        <div class="tip-title">Understand Work Rights</div>
+        <div class="tip-body">On a Swiss student permit, you can work up to 15 hours/week during term (per Zurich's AWA regulations). This helps offset living costs but cannot fund full tuition. Don't rely on part-time work — it's supplementary. Many programs also have structured internship pathways (EPFL's 6-month MFE internship is part of the degree).</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DISCLAIMER -->
+<div id="disclaimer" class="section">
+  <div class="container">
+    <div class="section-label">Important Notices</div>
+    <div class="section-title">Disclaimer &amp; Source Notes</div>
+    <div class="disclaimer">
+      <p><strong>Sources used:</strong> All information was compiled from official university websites (msfinance.uzh.ch, ethz.ch, epfl.ch, usi.ch, unisg.ch), official USI Desk portal, and verified third-party education platforms (Mastersportal, QuantNet, Kadamb Overseas). Research was conducted in May 2026.</p>
+      <br>
+      <p><strong>Fall 2027-specific deadlines:</strong> Exact application deadlines for Fall 2027 have been confirmed only for ETH/UZH (January 15, 2027) and EPFL (December 15 / March 31, 2027). USI's application window opens in September 2026 with specific deadlines to be published then. HSG's round-based deadlines are estimated from the 2026 pattern. <strong>Always verify all deadlines directly on official university portals before applying.</strong></p>
+      <br>
+      <p><strong>Tuition fees:</strong> EPFL's fee tripling (to CHF 2,190/semester for non-residents) was confirmed for Fall 2025. The rate for Fall 2027 may differ. Verify at epfl.ch/education/studies. ETH/UZH and USI fees are as published on official sites. INR conversions use an indicative rate of 1 CHF ≈ ₹93 (January 2026) — actual amounts will vary with exchange rates.</p>
+      <br>
+      <p><strong>No guarantee of admission:</strong> Admission statistics and selectivity descriptions are indicative. Admission to all these programs is competitive and subject to change. This guide does not constitute official advice from any university.</p>
+    </div>
+
+    <div style="margin-top:32px; display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:12px;">
+      <div style="background:var(--white);border:1px solid var(--border);padding:14px;border-radius:2px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px">ETH/UZH MScQF</div>
+        <a href="https://www.msfinance.uzh.ch" style="font-size:13px;color:var(--col1);word-break:break-all">msfinance.uzh.ch</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);padding:14px;border-radius:2px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px">EPFL MFE</div>
+        <a href="https://www.epfl.ch/schools/cdm/college-of-management-of-technology/education/masters/master_in_financial_engineering/" style="font-size:13px;color:var(--col1);word-break:break-all">epfl.ch → CDM → MFE</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);padding:14px;border-radius:2px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px">USI MSc Finance</div>
+        <a href="https://www.usi.ch/en/education/master/finance" style="font-size:13px;color:var(--col1);word-break:break-all">usi.ch/en/education/master/finance</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);padding:14px;border-radius:2px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px">USI MScFTC</div>
+        <a href="https://www.usi.ch/en/education/master/financial-technology-and-computing" style="font-size:13px;color:var(--col1);word-break:break-all">usi.ch → MScFTC</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);padding:14px;border-radius:2px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px">HSG MBF</div>
+        <a href="https://www.unisg.ch/en/studying/programmes/master/banking-and-finance-mbf/" style="font-size:13px;color:var(--col1);word-break:break-all">unisg.ch → Master → MBF</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>Swiss Finance &amp; FinTech Masters Guide · Fall 2027 · Compiled May 2026 · All fees and deadlines subject to change · Verify at official university websites</div>
+</footer>
+
+</body>
+</html>

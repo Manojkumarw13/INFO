@@ -1,0 +1,243 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+:root{
+  --li:#185FA5;--li-bg:#E6F1FB;--li-dark:#0C447C;
+  --yt:#A32D2D;--yt-bg:#FCEBEB;--yt-dark:#501313;
+  --ig:#993556;--ig-bg:#FBEAF0;--ig-dark:#4B1528;
+  --x:#444441;--x-bg:#F1EFE8;--x-dark:#2C2C2A;
+}
+
+.top-bar{padding:1.25rem 1.25rem 0.75rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.top-bar h1{font-size:17px;font-weight:500;color:var(--color-text-primary);margin-bottom:10px}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:12px}
+.leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+.nav-row{display:flex;align-items:center;gap:8px;padding:10px 1.25rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.nav-row span{font-size:13px;color:var(--color-text-secondary);flex:1;text-align:center}
+.nav-row button{font-size:13px;padding:5px 14px}
+
+.month-label{font-size:11px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.5px;padding:10px 1.25rem 4px}
+
+.week-row{display:grid;grid-template-columns:70px 1fr 1fr 1fr 1fr;border-bottom:0.5px solid var(--color-border-tertiary)}
+.week-row:last-child{border-bottom:none}
+.week-cell{padding:10px 10px;border-right:0.5px solid var(--color-border-tertiary);min-height:64px}
+.week-cell:last-child{border-right:none}
+.week-num{font-size:13px;font-weight:500;color:var(--color-text-primary);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px}
+.week-num span{font-size:10px;color:var(--color-text-tertiary);font-weight:400}
+
+.col-head{display:grid;grid-template-columns:70px 1fr 1fr 1fr 1fr;padding:0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.col-head-cell{padding:7px 10px;font-size:11px;font-weight:500;color:var(--color-text-secondary);border-right:0.5px solid var(--color-border-tertiary);display:flex;align-items:center;gap:5px}
+.col-head-cell:last-child{border-right:none}
+.col-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+.pill{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:10px;margin:2px 2px 0 0;line-height:1.5;cursor:default}
+.pill-li{background:var(--li-bg);color:var(--li-dark)}
+.pill-yt{background:var(--yt-bg);color:var(--yt-dark)}
+.pill-ig{background:var(--ig-bg);color:var(--ig-dark)}
+.pill-x{background:var(--x-bg);color:var(--x-dark)}
+
+.post-item{font-size:11px;color:var(--color-text-secondary);line-height:1.5;margin:1px 0}
+.freq-badge{font-size:10px;color:var(--color-text-tertiary)}
+
+.tip-band{margin:12px 1.25rem;padding:10px 14px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border-left:2px solid var(--color-border-secondary);border-radius:0}
+.tip-band p{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.tip-band strong{color:var(--color-text-primary);font-weight:500}
+
+.cta-row{display:flex;gap:8px;flex-wrap:wrap;padding:12px 1.25rem 1.25rem}
+.cta-row button{font-size:12px;padding:6px 14px}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px 1.25rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.stat-label{font-size:10px;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.4px}
+.stat-value{font-size:16px;font-weight:500;color:var(--color-text-primary);margin-top:2px}
+</style>
+
+<h2 class="sr-only">3-month content calendar for LinkedIn, YouTube, Instagram, and X for an AI and Data Science freelancer</h2>
+
+<div class="top-bar">
+  <h1>Content calendar — months 1–3</h1>
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--li)"></div><span style="color:var(--color-text-secondary)">LinkedIn (5×/wk)</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--yt)"></div><span style="color:var(--color-text-secondary)">YouTube (1×/wk)</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--ig)"></div><span style="color:var(--color-text-secondary)">Instagram (4×/wk)</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--x)"></div><span style="color:var(--color-text-secondary)">X / Twitter (5×/day)</span></div>
+  </div>
+</div>
+
+<div class="nav-row">
+  <button id="prev-btn" onclick="navigate(-1)" disabled>← prev</button>
+  <span id="month-title" style="font-weight:500;color:var(--color-text-primary)">Month 1 — Foundation</span>
+  <button id="next-btn" onclick="navigate(1)">next →</button>
+</div>
+
+<div id="cal-body"></div>
+
+<script>
+const data = [
+  {
+    month:"Month 1 — Foundation",
+    subtitle:"Build your identity. Every post teaches the audience who you are and what you do.",
+    tip:"<strong>Batch content Sunday evenings</strong> — write all 5 LinkedIn posts, schedule them via Buffer or LinkedIn native scheduler. Spend 45 mins filming one YouTube video. Repurpose each YT video into 2 Instagram carousels and 5 tweet threads the same week.",
+    weeks:[
+      {
+        n:1, dates:"Wk 1",
+        li:["Day 1: Intro post — your AI & DS journey story","Day 2: 'Why I chose Data Science' (personal + relatable)","Day 3: My current tech stack (Python, Power BI, N8N)","Day 4: One thing I wish I knew when starting DS","Day 5: Poll — what do you struggle with in data?"],
+        yt:["Video: 'I'm a B.Tech AI student — here's my plan'"],
+        ig:["Carousel: 5 tools every data student needs","Reel: Screen record of Power BI dashboard you built","Carousel: 'My AI learning roadmap' infographic","Story poll: Do you use Power BI or Tableau?"],
+        x:["Thread: 5 Python libraries I use every week","Daily tips on Python/DS","Engage on AI influencers' posts","Retweet + add opinion on AI news","Share YT video with key takeaway"]
+      },
+      {
+        n:2, dates:"Wk 2",
+        li:["Day 1: Power BI tip — drill-through filters explained","Day 2: Show your portfolio project #1 (sales dashboard)","Day 3: '3 mistakes I made learning Python (and how I fixed them)'","Day 4: What is N8N? (explainer for beginners)","Day 5: Weekend reflection — what I learned this week"],
+        yt:["Video: 'Build a Sales Dashboard in Power BI — full walkthrough'"],
+        ig:["Carousel: Power BI vs Tableau — which to learn first?","Reel: 60-sec Power BI tip (slicers tutorial)","Carousel: Portfolio project breakdown (before/after)","Story: Day in my life as a DS student"],
+        x:["Thread: Power BI vs Tableau for beginners","Share dashboard screenshot + GitHub link","Tip: DAX formula of the week","Engage with #PowerBI hashtag posts","Poll: Python or R for data analysis?"]
+      },
+      {
+        n:3, dates:"Wk 3",
+        li:["Day 1: Python tip — how I clean messy data in 10 lines","Day 2: N8N automation I built this week (with screenshot)","Day 3: Freelancing myth #1 — 'You need years of experience'","Day 4: How I structure a portfolio project (with template link)","Day 5: Engagement post — tag a fellow DS learner!"],
+        yt:["Video: 'Python Data Cleaning Tutorial — Pandas in 20 minutes'"],
+        ig:["Carousel: How to structure a portfolio project","Reel: Python data cleaning in 60 seconds","Carousel: N8N automation workflow explanation","Story: Ask me anything about DS (Q&A sticker)"],
+        x:["Thread: How to clean data fast with Pandas","Share N8N workflow screenshot","Daily Python one-liners","Engage in #100DaysOfCode","Reply to people asking DS questions"]
+      },
+      {
+        n:4, dates:"Wk 4",
+        li:["Day 1: Showcase portfolio #2 — Python scraper project","Day 2: 'A complete beginner's guide to N8N automation'","Day 3: Month 1 recap — what I built, what I learned","Day 4: How I'm positioning myself for AI freelancing","Day 5: Offer: free 20-min call with 3 followers (DM to enter)"],
+        yt:["Video: 'Build a Web Scraper in Python — beginner tutorial'"],
+        ig:["Carousel: Month 1 wins — what I built","Reel: N8N workflow demo (screen record)","Carousel: How to position yourself as an AI freelancer","Story: Swipe up — see my portfolio (link sticker)"],
+        x:["Thread: Month 1 — what I built in 30 days","Share scraper GitHub repo","Tip of the day series","Engage with freelance community","Poll: What would you want me to teach next?"]
+      }
+    ]
+  },
+  {
+    month:"Month 2 — Credibility",
+    subtitle:"Document your work, share client-worthy projects, and grow your authority with tutorials.",
+    tip:"<strong>Repurpose ruthlessly</strong> — your YouTube walkthrough becomes a LinkedIn post, 2 IG carousels, and a 5-tweet thread. One piece of effort = 8 pieces of content. Start tracking which post types get the most engagement and double down on those formats.",
+    weeks:[
+      {
+        n:5, dates:"Wk 5",
+        li:["Day 1: 'I sent 20 Upwork proposals — here's what I learned'","Day 2: Tutorial — how to use Python with Google Sheets API","Day 3: What clients actually want (from data projects)","Day 4: My portfolio website is live — here's what's on it","Day 5: Unpopular opinion: Power BI > Tableau for most businesses"],
+        yt:["Video: 'Connect Python to Google Sheets — full tutorial'"],
+        ig:["Carousel: 5 things clients want in a data freelancer","Reel: Portfolio website walkthrough (screen record)","Carousel: What is the Google Sheets API? (visual explainer)","Story: Behind the scenes — how I record YouTube videos"],
+        x:["Thread: 20 Upwork proposals — my honest review","Share portfolio website link","Python + Sheets API tip","Engage in #freelancing community","Daily DS insight"]
+      },
+      {
+        n:6, dates:"Wk 6",
+        li:["Day 1: 'I built an AI chatbot in Python — here's how'","Day 2: How N8N saved me 3 hours of manual work this week","Day 3: Beginner's guide to writing Upwork proposals","Day 4: Data story: visualizing India's GDP growth in Power BI","Day 5: Shoutout to 3 DS creators you should follow"],
+        yt:["Video: 'Build a Simple AI Chatbot with Python & Gemini API'"],
+        ig:["Carousel: How to write a winning Upwork proposal","Reel: AI chatbot demo (screen capture)","Carousel: India GDP dashboard breakdown","Story: Q&A — answer follower DMs about freelancing"],
+        x:["Thread: How I built an AI chatbot in a weekend","Upwork proposal tips thread","Share chatbot GitHub repo","Engage on AI tool posts","Poll: Have you ever freelanced?"]
+      },
+      {
+        n:7, dates:"Wk 7",
+        li:["Day 1: Case study: the data dashboard I'd build for a retail store","Day 2: '5 Python libraries every data freelancer should know'","Day 3: N8N vs Zapier — which automation tool wins?","Day 4: How I research clients before sending a proposal","Day 5: Weekly learning: one AI paper I read + key takeaway"],
+        yt:["Video: 'N8N vs Zapier — full comparison for beginners'"],
+        ig:["Carousel: 5 Python libraries for freelancers","Reel: N8N vs Zapier quick comparison","Carousel: How to research a client before proposing","Story: 'Would you hire me?' — playful engagement poll"],
+        x:["Thread: N8N vs Zapier — my honest take","5 Python libraries + use cases","Research-before-proposal checklist","Engage with #N8N community","AI paper summary thread"]
+      },
+      {
+        n:8, dates:"Wk 8",
+        li:["Day 1: Showcase: N8N automation pipeline (email → Sheets → Slack)","Day 2: '3 data projects you can build this weekend (with datasets)'","Day 3: How I price my freelance projects (my pricing framework)","Day 4: LinkedIn growth tip that doubled my impressions","Day 5: Month 2 reflection — follower count, projects, learnings"],
+        yt:["Video: 'Build an N8N Automation Pipeline — email to Google Sheets'"],
+        ig:["Carousel: 3 weekend data projects with datasets","Reel: N8N pipeline walkthrough (30 sec)","Carousel: How to price your freelance services","Story: Month 2 stats — followers, views, DMs"],
+        x:["Thread: My pricing framework for data projects","3 project ideas with links","Month 2 stats in public","N8N pipeline screenshot + GitHub","Tip: LinkedIn algorithm hack"]
+      }
+    ]
+  },
+  {
+    month:"Month 3 — Client Mode",
+    subtitle:"Shift from learning to earning. Document client work, launch outreach, and build social proof.",
+    tip:"<strong>Every project = content</strong> — When you finish a project (even for free), document it with a before/after screenshot, a 2-min Loom, and a written case study. This is the highest-converting content at this stage. Real results beat tutorials every time.",
+    weeks:[
+      {
+        n:9, dates:"Wk 9",
+        li:["Day 1: 'I sent my first invoice — here's what I felt'","Day 2: How to find clients who need data dashboards","Day 3: Power BI report I built for a hypothetical e-commerce brand","Day 4: The exact cold DM template I use on LinkedIn","Day 5: 5 Indian businesses that need automation (and don't know it)"],
+        yt:["Video: 'How I Find Freelance Data Clients on LinkedIn (My Exact Process)'"],
+        ig:["Carousel: Cold DM template for freelancers","Reel: Power BI e-commerce dashboard tour","Carousel: 5 business types that need automation","Story: 'Would you hire a student freelancer?' — poll"],
+        x:["Thread: Cold DM template that gets replies","Indian businesses + automation needs","LinkedIn client-finding strategy","Dashboard screenshot tour","Freelancer mindset tip"]
+      },
+      {
+        n:10, dates:"Wk 10",
+        li:["Day 1: My first client project — what I did, what I charged","Day 2: How to write a case study from your portfolio project","Day 3: The N8N automation that wowed my first client","Day 4: '3 questions to ask every client before starting a project'","Day 5: Testimonial post — what my first client said about me"],
+        yt:["Video: 'I Got My First Freelance Client — Here's Exactly What Happened'"],
+        ig:["Carousel: How to write a portfolio case study","Reel: First client story (talking head + B-roll)","Carousel: 3 questions to ask new clients","Story: Show testimonial screenshot (blurred name)"],
+        x:["Thread: First client experience — honest story","Case study writing tips","Client onboarding checklist","Testimonial + gratitude post","What I'd do differently — reflection"]
+      },
+      {
+        n:11, dates:"Wk 11",
+        li:["Day 1: 'Here's my full service menu — what I offer and for how much'","Day 2: Advanced Power BI: row-level security explained simply","Day 3: How I use N8N to automate my own freelance admin","Day 4: Content repurposing: how I make 1 video into 8 posts","Day 5: Calling out: who's a small business owner I can help? (DM me)"],
+        yt:["Video: 'Automate Your Freelance Business with N8N — 5 Workflows'"],
+        ig:["Carousel: My full service menu (designed graphic)","Reel: N8N admin automation demo","Carousel: Content repurposing framework","Story: 'What service would you pay for?' — poll sticker"],
+        x:["Thread: My service menu + prices (transparent)","Content repurposing 1→8 framework","N8N admin automation overview","Tag a business owner who needs data","Reflect on week's client interactions"]
+      },
+      {
+        n:12, dates:"Wk 12",
+        li:["Day 1: '3-month build-in-public recap — numbers, lessons, income'","Day 2: How my content led to my first 3 client inquiries","Day 3: What I'm focusing on in the next 3 months","Day 4: Resources that helped me most (tools, courses, creators)","Day 5: Gratitude post — tagging everyone who supported the journey"],
+        yt:["Video: '3 Months of Freelancing as a Student — Full Honest Recap'"],
+        ig:["Carousel: 3-month stats (followers, projects, income)","Reel: Transformation — week 1 vs week 12 content","Carousel: Resources that helped me most","Story: Thank you — name every supporter in stories"],
+        x:["Thread: 3 months building in public — full stats","Resource mega-thread","What's next for months 4–6","Tag people who helped you grow","Ask audience: what should I build next?"]
+      }
+    ]
+  }
+];
+
+let cur = 0;
+
+function renderMonth(idx){
+  const m = data[idx];
+  const body = document.getElementById('cal-body');
+  const totalPosts = m.weeks.reduce((a,w)=>a+w.li.length+w.yt.length+w.ig.length+w.x.length,0);
+  const liCount = m.weeks.reduce((a,w)=>a+w.li.length,0);
+  const ytCount = m.weeks.reduce((a,w)=>a+w.yt.length,0);
+  const igCount = m.weeks.reduce((a,w)=>a+w.ig.length,0);
+
+  let html = `<div class="stats-row">
+    <div class="stat"><div class="stat-label">Total posts</div><div class="stat-value">${totalPosts}</div></div>
+    <div class="stat"><div class="stat-label">LinkedIn</div><div class="stat-value">${liCount}</div></div>
+    <div class="stat"><div class="stat-label">YouTube</div><div class="stat-value">${ytCount}</div></div>
+    <div class="stat"><div class="stat-label">Instagram</div><div class="stat-value">${igCount}</div></div>
+  </div>`;
+
+  html += `<div class="col-head">
+    <div class="col-head-cell" style="font-size:10px;color:var(--color-text-tertiary)">Week</div>
+    <div class="col-head-cell"><div class="col-dot" style="background:var(--li)"></div>LinkedIn</div>
+    <div class="col-head-cell"><div class="col-dot" style="background:var(--yt)"></div>YouTube</div>
+    <div class="col-head-cell"><div class="col-dot" style="background:var(--ig)"></div>Instagram</div>
+    <div class="col-head-cell"><div class="col-dot" style="background:var(--x)"></div>X / Twitter</div>
+  </div>`;
+
+  m.weeks.forEach(w=>{
+    html += `<div class="week-row">
+      <div class="week-cell week-num" style="background:var(--color-background-secondary)"><span style="font-size:12px;font-weight:500;color:var(--color-text-primary)">Wk ${w.n}</span></div>
+      <div class="week-cell">${w.li.map(p=>`<p class="post-item"><span class="pill pill-li">LI</span> ${p}</p>`).join('')}</div>
+      <div class="week-cell">${w.yt.map(p=>`<p class="post-item"><span class="pill pill-yt">YT</span> ${p}</p>`).join('')}</div>
+      <div class="week-cell">${w.ig.map(p=>`<p class="post-item"><span class="pill pill-ig">IG</span> ${p}</p>`).join('')}</div>
+      <div class="week-cell">${w.x.map(p=>`<p class="post-item"><span class="pill pill-x">X</span> ${p}</p>`).join('')}</div>
+    </div>`;
+  });
+
+  html += `<div class="tip-band"><p><i class="ti ti-bulb" aria-hidden="true" style="font-size:14px;margin-right:6px;vertical-align:-2px"></i>${m.tip}</p></div>`;
+
+  html += `<div class="cta-row">
+    <button onclick="sendPrompt('Write me 5 LinkedIn post scripts for month ${idx+1} of my AI freelance journey ↗')">Get LinkedIn scripts ↗</button>
+    <button onclick="sendPrompt('Write me YouTube video scripts and titles for month ${idx+1} ↗')">Get YouTube scripts ↗</button>
+    <button onclick="sendPrompt('Write me Instagram carousel copy for month ${idx+1} ↗')">Get IG copy ↗</button>
+  </div>`;
+
+  body.innerHTML = html;
+  document.getElementById('month-title').textContent = m.month;
+  document.getElementById('prev-btn').disabled = idx === 0;
+  document.getElementById('next-btn').disabled = idx === data.length - 1;
+}
+
+function navigate(dir){
+  cur = Math.max(0, Math.min(data.length-1, cur+dir));
+  renderMonth(cur);
+}
+
+renderMonth(0);
+</script>

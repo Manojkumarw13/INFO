@@ -1,0 +1,11 @@
+# Ignore scripts and graphify folders
+scripts/
+graphify-out/
+
+# Ignore OS and IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.temp

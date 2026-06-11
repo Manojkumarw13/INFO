@@ -1,0 +1,398 @@
+
+<h2 class="sr-only">Swiss companies ranked by base salary and work-life balance across Quant and AI/Data Science roles</h2>
+
+<style>
+  .seg-btn { padding: 6px 16px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); font-size: 13px; cursor: pointer; transition: all 0.15s; }
+  .seg-btn.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); font-weight: 500; }
+  .seg-btn:hover:not(.active) { background: var(--color-background-secondary); }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .company-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .company-name { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
+  .company-sub { font-size: 12px; color: var(--color-text-secondary); margin: 0; margin-top: 2px; }
+  .badge { font-size: 11px; padding: 3px 9px; border-radius: 99px; white-space: nowrap; flex-shrink: 0; }
+  .badge-teal { background: #E1F5EE; color: #0F6E56; }
+  .badge-purple { background: #EEEDFE; color: #3C3489; }
+  .badge-amber { background: #FAEEDA; color: #854F0B; }
+  .badge-coral { background: #FAECE7; color: #993C1D; }
+  .badge-blue { background: #E6F1FB; color: #185FA5; }
+  .badge-gray { background: #F1EFE8; color: #5F5E5A; }
+  @media (prefers-color-scheme: dark) {
+    .badge-teal { background: #085041; color: #9FE1CB; }
+    .badge-purple { background: #3C3489; color: #CECBF6; }
+    .badge-amber { background: #854F0B; color: #FAC775; }
+    .badge-coral { background: #712B13; color: #F5C4B3; }
+    .badge-blue { background: #0C447C; color: #B5D4F4; }
+    .badge-gray { background: #444441; color: #D3D1C7; }
+  }
+  .meta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: var(--color-text-secondary); display: flex; align-items: center; gap: 4px; }
+  .meta-item strong { color: var(--color-text-primary); font-weight: 500; }
+  .roles-list { font-size: 12px; color: var(--color-text-secondary); }
+  .roles-list span { display: inline-block; background: var(--color-background-secondary); border-radius: 4px; padding: 2px 7px; margin: 2px 2px 2px 0; }
+  .bars-row { display: flex; flex-direction: column; gap: 6px; }
+  .bar-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
+  .bar-track { height: 5px; background: var(--color-border-tertiary); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; }
+  .trade-off { font-size: 12px; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding-left: 10px; }
+  .trade-off b { color: var(--color-text-primary); font-weight: 500; }
+  .rank-badge { font-size: 11px; font-weight: 500; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .section-label { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; }
+  .salary-big { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
+  .salary-range { font-size: 11px; color: var(--color-text-secondary); }
+</style>
+
+<div style="padding: 1rem 0;">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+    <div>
+      <p style="font-size:18px;font-weight:500;margin:0;color:var(--color-text-primary)">Swiss tech employers</p>
+      <p style="font-size:13px;color:var(--color-text-secondary);margin:4px 0 0;">Ranked by base salary · 2026 data</p>
+    </div>
+    <div style="display:flex;gap:6px;">
+      <button class="seg-btn active" onclick="show('quant',this)">Quant</button>
+      <button class="seg-btn" onclick="show('ai',this)">AI / Data Science</button>
+    </div>
+  </div>
+
+  <div id="view-quant" style="display:flex;flex-direction:column;gap:12px;">
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#FAEEDA;color:#854F0B;">1</div>
+          <div>
+            <p class="company-name">Systematica Investments</p>
+            <p class="company-sub">Geneva · Systematic hedge fund</p>
+          </div>
+        </div>
+        <span class="badge badge-amber">Quant</span>
+      </div>
+      <div class="roles-list"><span>Quant Researcher</span><span>Quant Developer</span><span>Signal Researcher</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary (senior)</p>
+          <p class="salary-big">CHF 180–280K</p>
+          <p class="salary-range">Grad entry: ~CHF 130–160K</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>9/10</span></div><div class="bar-track"><div class="bar-fill" style="width:90%;background:#BA7517;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>5/10</span></div><div class="bar-track"><div class="bar-fill" style="width:50%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>55–60</span></div><div class="bar-track"><div class="bar-fill" style="width:75%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Top of Swiss quant market, performance bonuses can double base. <b>Trade-off:</b> Pressure-cooker research environment; on-call during market events; very high hiring bar (PhD/STEM expected).</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#FAEEDA;color:#854F0B;">2</div>
+          <div>
+            <p class="company-name">UBS (post–Credit Suisse merger)</p>
+            <p class="company-sub">Zurich · Global investment bank</p>
+          </div>
+        </div>
+        <span class="badge badge-amber">Quant</span>
+      </div>
+      <div class="roles-list"><span>Quant Analyst</span><span>Quant Developer</span><span>Risk Quant</span><span>Strats</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 110–165K</p>
+          <p class="salary-range">Senior/VP: CHF 145–200K + bonus</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>7/10</span></div><div class="bar-track"><div class="bar-fill" style="width:70%;background:#BA7517;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>6/10</span></div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>45–50</span></div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Solid base; year-end bonuses vary widely by desk P&L. <b>Trade-off:</b> Post-merger bureaucracy & redundancy risk; compensation rating 2.7/5 on Glassdoor; slow promotions but global brand carries weight on CV.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#FAEEDA;color:#854F0B;">3</div>
+          <div>
+            <p class="company-name">Swiss Re</p>
+            <p class="company-sub">Zurich · Reinsurance & insurance</p>
+          </div>
+        </div>
+        <span class="badge badge-gray">Quant / AI hybrid</span>
+      </div>
+      <div class="roles-list"><span>Quant Analyst</span><span>Risk Modeller</span><span>Actuarial Data Scientist</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 105–155K</p>
+          <p class="salary-range">Senior specialists: up to CHF 175K</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>6/10</span></div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#BA7517;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>8/10</span></div><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–44</span></div><div class="bar-track"><div class="bar-fill" style="width:50%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Below hedge fund levels but generous benefits + pension. <b>Trade-off:</b> Insurance/actuarial domain can feel niche; slower pace suits some. Excellent stability and among best WLB of Swiss finance employers.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#FAEEDA;color:#854F0B;">4</div>
+          <div>
+            <p class="company-name">SIX Swiss Exchange</p>
+            <p class="company-sub">Zurich · Financial market infrastructure</p>
+          </div>
+        </div>
+        <span class="badge badge-amber">Quant</span>
+      </div>
+      <div class="roles-list"><span>Quant Analyst</span><span>Market Risk Analyst</span><span>Algo Developer</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 100–150K</p>
+          <p class="salary-range">Typical range, mid-seniority</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>6/10</span></div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#BA7517;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>8/10</span></div><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–43</span></div><div class="bar-track"><div class="bar-fill" style="width:49%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Moderate base, limited upside vs. banks or hedge funds. <b>Trade-off:</b> Exchange infrastructure is methodical work with narrow scope; very Swiss corporate culture; excellent stability and structured hours. Good for quants who value predictability.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#FAEEDA;color:#854F0B;">5</div>
+          <div>
+            <p class="company-name">Pictet Asset Management</p>
+            <p class="company-sub">Geneva · Private bank & asset manager</p>
+          </div>
+        </div>
+        <span class="badge badge-amber">Quant</span>
+      </div>
+      <div class="roles-list"><span>Quant Researcher</span><span>Portfolio Analyst</span><span>Factor Modeller</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 95–145K</p>
+          <p class="salary-range">Geneva premium; partnership track at top</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>5/10</span></div><div class="bar-track"><div class="bar-fill" style="width:52%;background:#BA7517;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>7/10</span></div><div class="bar-track"><div class="bar-fill" style="width:70%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>42–46</span></div><div class="bar-track"><div class="bar-fill" style="width:53%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Below investment-bank quant desks; discreet private-bank pay philosophy. <b>Trade-off:</b> Prestige of Geneva's wealth management ecosystem; conservative culture; partnership structure means large upside is long-term only. French-speaking environment advantageous.</div>
+    </div>
+
+  </div>
+
+  <div id="view-ai" style="display:none;flex-direction:column;gap:12px;">
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#E6F1FB;color:#185FA5;">1</div>
+          <div>
+            <p class="company-name">Google Zurich</p>
+            <p class="company-sub">Zurich · Hyperscaler — largest EU engineering site</p>
+          </div>
+        </div>
+        <span class="badge badge-blue">AI / DS</span>
+      </div>
+      <div class="roles-list"><span>ML Engineer (L4–L6)</span><span>Research Scientist</span><span>Data Scientist</span><span>AI Research</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 160–240K</p>
+          <p class="salary-range">Total comp (incl. RSUs): CHF 240–320K+ at L5+</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>10/10</span></div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#378ADD;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>8/10</span></div><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–45</span></div><div class="bar-track"><div class="bar-fill" style="width:51%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Sets the salary floor for all of Zurich tech; RSUs are substantial. <b>Trade-off:</b> Very high interview bar (4–6 rounds); internal project rotation can feel directionless; layoff rounds in 2023–24 have reduced some of the famed job security.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#E6F1FB;color:#185FA5;">2</div>
+          <div>
+            <p class="company-name">Microsoft Zurich</p>
+            <p class="company-sub">Zurich · Hyperscaler + Azure AI hub</p>
+          </div>
+        </div>
+        <span class="badge badge-blue">AI / DS</span>
+      </div>
+      <div class="roles-list"><span>ML Engineer</span><span>Data Scientist</span><span>Research SDE</span><span>Applied Scientist</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 140–220K</p>
+          <p class="salary-range">Total comp with RSUs: CHF 200–280K+ (senior)</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>9/10</span></div><div class="bar-track"><div class="bar-fill" style="width:90%;background:#378ADD;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>8/10</span></div><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–45</span></div><div class="bar-track"><div class="bar-fill" style="width:51%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Slightly below Google but still elite; OpenAI partnership has boosted AI hiring. <b>Trade-off:</b> More corporate than Google; internal tooling can be Windows-heavy; Zurich site is smaller, so career growth may require relocation.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#E6F1FB;color:#185FA5;">3</div>
+          <div>
+            <p class="company-name">Roche</p>
+            <p class="company-sub">Basel · Pharma & diagnostics — AI in drug discovery</p>
+          </div>
+        </div>
+        <span class="badge badge-blue">AI / DS</span>
+      </div>
+      <div class="roles-list"><span>Data Scientist</span><span>ML Research Scientist</span><span>Computational Biologist</span><span>MLOps Engineer</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 110–165K</p>
+          <p class="salary-range">Senior/principal: up to CHF 180K + bonus</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>7/10</span></div><div class="bar-track"><div class="bar-fill" style="width:70%;background:#378ADD;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>9/10</span></div><div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–43</span></div><div class="bar-track"><div class="bar-fill" style="width:49%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Below hyperscalers but competitive among corporates; stable bonuses. <b>Trade-off:</b> Highly mission-driven culture praised consistently on Glassdoor; pharma compliance can slow iteration cycles; Basel cost of living lower than Zurich.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#E6F1FB;color:#185FA5;">4</div>
+          <div>
+            <p class="company-name">Novartis</p>
+            <p class="company-sub">Basel / Zurich · Pharma — AI in clinical & genomics</p>
+          </div>
+        </div>
+        <span class="badge badge-blue">AI / DS</span>
+      </div>
+      <div class="roles-list"><span>Data Scientist</span><span>AI Researcher</span><span>Bioinformatics Scientist</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 100–155K</p>
+          <p class="salary-range">Scientist band: CHF 90–135K; senior ~150K+</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>6/10</span></div><div class="bar-track"><div class="bar-fill" style="width:63%;background:#378ADD;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>8/10</span></div><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–44</span></div><div class="bar-track"><div class="bar-fill" style="width:50%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Slightly below Roche; benefits package (pension, health) is comprehensive. <b>Trade-off:</b> Heavy matrix organisation; slow decision-making reported; strong for clinical AI but less pure ML engineering culture vs. Google/Microsoft.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#E6F1FB;color:#185FA5;">5</div>
+          <div>
+            <p class="company-name">Swiss Re (AI / DS track)</p>
+            <p class="company-sub">Zurich · Reinsurance — AI for risk &amp; pricing</p>
+          </div>
+        </div>
+        <span class="badge badge-gray">Quant / AI hybrid</span>
+      </div>
+      <div class="roles-list"><span>Data Scientist</span><span>ML Engineer</span><span>Actuarial AI Specialist</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 105–160K</p>
+          <p class="salary-range">Senior specialists: up to CHF 175K</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>6/10</span></div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#378ADD;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>9/10</span></div><div class="bar-track"><div class="bar-fill" style="width:90%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–43</span></div><div class="bar-track"><div class="bar-fill" style="width:49%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Good Swiss-corporate salary; strong pension and benefits. <b>Trade-off:</b> Insurance domain limits scope of ML problems; methodical culture; outstanding stability and structured hours make it one of the best WLB employers in Swiss tech-finance.</div>
+    </div>
+
+    <div class="card">
+      <div class="company-header">
+        <div style="display:flex;gap:10px;align-items:flex-start;">
+          <div class="rank-badge" style="background:#E6F1FB;color:#185FA5;">6</div>
+          <div>
+            <p class="company-name">IBM Research Zurich</p>
+            <p class="company-sub">Rüschlikon · R&amp;D lab — foundational AI &amp; quantum</p>
+          </div>
+        </div>
+        <span class="badge badge-blue">AI / DS</span>
+      </div>
+      <div class="roles-list"><span>Research Scientist (AI)</span><span>ML Engineer</span><span>Quantum Computing Researcher</span></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <p class="section-label">Base salary</p>
+          <p class="salary-big">CHF 100–155K</p>
+          <p class="salary-range">Senior researcher: ~CHF 140–175K</p>
+        </div>
+        <div style="flex:1;min-width:160px;">
+          <div class="bars-row">
+            <div><div class="bar-label"><span>Salary</span><span>6/10</span></div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#378ADD;"></div></div></div>
+            <div><div class="bar-label"><span>WLB</span><span>8/10</span></div><div class="bar-track"><div class="bar-fill" style="width:80%;background:#1D9E75;"></div></div></div>
+            <div><div class="bar-label"><span>~hrs/week</span><span>40–44</span></div><div class="bar-track"><div class="bar-fill" style="width:50%;background:#7F77DD;"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-off"><b>Pay:</b> Below Google/Microsoft; RSUs are small vs. hyperscalers. <b>Trade-off:</b> Genuine foundational research culture; hybrid work model is flexible; ETH Zurich adjacency means academic collaborations; IBM restructuring has created some uncertainty in 2024–25.</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:16px;padding:12px 16px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);display:flex;gap:16px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);"><div style="width:10px;height:5px;border-radius:3px;background:#BA7517;"></div>Salary score</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);"><div style="width:10px;height:5px;border-radius:3px;background:#1D9E75;"></div>WLB score</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);"><div style="width:10px;height:5px;border-radius:3px;background:#7F77DD;"></div>Avg hours/week intensity</div>
+    <div style="font-size:11px;color:var(--color-text-tertiary);margin-left:auto;">All CHF figures are gross base salary · Sources: Glassdoor, Levels.fyi, upreer.ch, quantt.co.uk · Apr 2026</div>
+  </div>
+</div>
+
+<script>
+function show(view, btn) {
+  document.getElementById('view-quant').style.display = view === 'quant' ? 'flex' : 'none';
+  document.getElementById('view-ai').style.display = view === 'ai' ? 'flex' : 'none';
+  document.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>

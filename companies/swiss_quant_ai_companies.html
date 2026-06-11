@@ -1,0 +1,168 @@
+
+<h2 class="sr-only">Interactive table of Swiss Quant and AI/Data Science companies ranked by base salary and work-life balance</h2>
+
+<style>
+  .tab-bar { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+  .tab { padding: 6px 16px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); font-size: 13px; cursor: pointer; background: transparent; color: var(--color-text-secondary); }
+  .tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); font-weight: 500; }
+  .sort-btn { background: none; border: none; cursor: pointer; font-size: 12px; color: var(--color-text-secondary); padding: 0 4px; }
+  .sort-btn.active { color: var(--color-text-primary); font-weight: 500; }
+  th { text-align: left; padding: 8px 10px; font-size: 12px; font-weight: 500; color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); white-space: nowrap; }
+  td { padding: 10px 10px; font-size: 13px; border-bottom: 0.5px solid var(--color-border-tertiary); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--color-background-secondary); }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 99px; font-weight: 500; }
+  .badge-finance { background: #E6F1FB; color: #0C447C; }
+  .badge-hedge { background: #EEEDFE; color: #3C3489; }
+  .badge-tech { background: #EAF3DE; color: #27500A; }
+  .badge-pharma { background: #E1F5EE; color: #085041; }
+  .badge-consult { background: #FAEEDA; color: #633806; }
+  @media (prefers-color-scheme: dark) {
+    .badge-finance { background: #0C447C; color: #B5D4F4; }
+    .badge-hedge { background: #3C3489; color: #CECBF6; }
+    .badge-tech { background: #27500A; color: #C0DD97; }
+    .badge-pharma { background: #085041; color: #9FE1CB; }
+    .badge-consult { background: #633806; color: #FAC775; }
+  }
+  .stars { color: #EF9F27; font-size: 13px; letter-spacing: 1px; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 99px; }
+  .pill-high { background: #EAF3DE; color: #3B6D11; }
+  .pill-mid { background: #FAEEDA; color: #854F0B; }
+  .pill-low { background: #FCEBEB; color: #A32D2D; }
+  @media (prefers-color-scheme: dark) {
+    .pill-high { background: #3B6D11; color: #C0DD97; }
+    .pill-mid { background: #854F0B; color: #FAC775; }
+    .pill-low { background: #A32D2D; color: #F7C1C1; }
+  }
+  .note-box { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 12px; color: var(--color-text-secondary); margin-top: 1rem; line-height: 1.6; }
+</style>
+
+<div style="padding: 1rem 0 0;">
+  <div class="tab-bar">
+    <button class="tab active" onclick="showTab('quant',this)">Quant roles</button>
+    <button class="tab" onclick="showTab('ai',this)">AI / Data Science roles</button>
+  </div>
+
+  <div id="quant-section">
+    <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Type</th>
+          <th onclick="sortTable('quant','salary')" style="cursor:pointer;">Base salary (CHF) <span class="sort-btn active" id="quant-salary-sort">↓</span></th>
+          <th onclick="sortTable('quant','wlb')" style="cursor:pointer;">Work-life balance <span class="sort-btn" id="quant-wlb-sort">⇅</span></th>
+          <th>Culture trade-off</th>
+        </tr>
+      </thead>
+      <tbody id="quant-tbody"></tbody>
+    </table>
+    </div>
+    <div class="note-box">
+      <strong>Quant roles</strong> include Quantitative Researcher, Quant Analyst, Quant Developer, Risk Quant, Structurer. Ranges reflect senior IC (3–8 yrs). Total comp can be 1.5–3× base at top hedge funds.
+    </div>
+  </div>
+
+  <div id="ai-section" style="display:none;">
+    <div style="overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Type</th>
+          <th onclick="sortTable('ai','salary')" style="cursor:pointer;">Base salary (CHF) <span class="sort-btn active" id="ai-salary-sort">↓</span></th>
+          <th onclick="sortTable('ai','wlb')" style="cursor:pointer;">Work-life balance <span class="sort-btn" id="ai-wlb-sort">⇅</span></th>
+          <th>Culture trade-off</th>
+        </tr>
+      </thead>
+      <tbody id="ai-tbody"></tbody>
+    </table>
+    </div>
+    <div class="note-box">
+      <strong>AI / Data Science roles</strong> include ML Engineer, Data Scientist, Applied Scientist, Research Scientist, AI/ML Lead. Ranges reflect senior IC (3–8 yrs). Big Tech RSUs can add 20–60% on top of base.
+    </div>
+  </div>
+</div>
+
+<script>
+const quantData = [
+  { company: "Citadel / Citadel Securities", type: "hedge", salaryLow: 200, salaryHigh: 300, wlb: 2, wlbLabel: "Demanding", wlbClass: "pill-low", trade: "Top-tier comp, brutal hours & performance pressure" },
+  { company: "Millennium Management", type: "hedge", salaryLow: 180, salaryHigh: 280, wlb: 2, wlbLabel: "Demanding", wlbClass: "pill-low", trade: "Pod autonomy, high alpha expectations, frequent cuts" },
+  { company: "Brevan Howard", type: "hedge", salaryLow: 160, salaryHigh: 250, wlb: 2, wlbLabel: "Demanding", wlbClass: "pill-low", trade: "Macro-focused, Geneva base, smaller team feel" },
+  { company: "Man Group / Man AHL", type: "hedge", salaryLow: 150, salaryHigh: 220, wlb: 3, wlbLabel: "Moderate", wlbClass: "pill-mid", trade: "Systematic edge, academic culture, London-centric" },
+  { company: "UBS (Markets / IB)", type: "finance", salaryLow: 140, salaryHigh: 200, wlb: 2, wlbLabel: "Demanding", wlbClass: "pill-low", trade: "Brand strength, bureaucratic, post-CS integration chaos" },
+  { company: "Julius Bär", type: "finance", salaryLow: 120, salaryHigh: 170, wlb: 3, wlbLabel: "Moderate", wlbClass: "pill-mid", trade: "WM quant niche, stable but smaller scope" },
+  { company: "Pictet Asset Management", type: "finance", salaryLow: 115, salaryHigh: 165, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Partnership culture, loyal staff, conservative pace" },
+  { company: "Vontobel AM", type: "finance", salaryLow: 110, salaryHigh: 160, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Steady Swiss WM, quant roles growing but niche" },
+  { company: "SIX Group", type: "finance", salaryLow: 100, salaryHigh: 150, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Market infra / data, predictable, limited upside" },
+  { company: "Zurich Insurance", type: "finance", salaryLow: 100, salaryHigh: 145, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Actuarial/risk quant, very stable, slower career" },
+];
+
+const aiData = [
+  { company: "Google (Zürich)", type: "tech", salaryLow: 170, salaryHigh: 260, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Best RSUs, research freedom, post-2023 layoff caution" },
+  { company: "Microsoft (Zürich)", type: "tech", salaryLow: 155, salaryHigh: 230, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Strong AI infra team, stable, less cutting-edge than Google" },
+  { company: "Amazon / AWS (Zürich)", type: "tech", salaryLow: 140, salaryHigh: 210, wlb: 3, wlbLabel: "Moderate", wlbClass: "pill-mid", trade: "Leadership principles culture, high ownership, grind-y" },
+  { company: "Meta (Zürich)", type: "tech", salaryLow: 150, salaryHigh: 220, wlb: 3, wlbLabel: "Moderate", wlbClass: "pill-mid", trade: "Competitive RSUs, move-fast culture, ads-centric ML" },
+  { company: "McKinsey / BCG (Data)", type: "consult", salaryLow: 130, salaryHigh: 190, wlb: 2, wlbLabel: "Demanding", wlbClass: "pill-low", trade: "Prestige & exit opps, travel-heavy, advisory not deep ML" },
+  { company: "Roche (pRED / Informatics)", type: "pharma", salaryLow: 120, salaryHigh: 175, wlb: 5, wlbLabel: "Excellent", wlbClass: "pill-high", trade: "Meaningful work, generous benefits, slower innovation pace" },
+  { company: "Novartis (NIBR / AI)", type: "pharma", salaryLow: 120, salaryHigh: 170, wlb: 5, wlbLabel: "Excellent", wlbClass: "pill-high", trade: "Impact in drug discovery, bureaucratic, great WLB" },
+  { company: "ABB (Corporate Research)", type: "tech", salaryLow: 110, salaryHigh: 160, wlb: 5, wlbLabel: "Excellent", wlbClass: "pill-high", trade: "Industrial AI niche, very stable, less cutting-edge" },
+  { company: "Swisscom (AI Lab)", type: "tech", salaryLow: 105, salaryHigh: 150, wlb: 5, wlbLabel: "Excellent", wlbClass: "pill-high", trade: "National telco, steady, Swiss-language advantage helps" },
+  { company: "EPFL / ETH spinouts", type: "tech", salaryLow: 95, salaryHigh: 145, wlb: 4, wlbLabel: "Good", wlbClass: "pill-high", trade: "Equity upside possible, early-stage risk, academic roots" },
+];
+
+const badgeMap = { hedge: ["badge-hedge","Hedge fund"], finance: ["badge-finance","Bank / AM"], tech: ["badge-tech","Tech"], pharma: ["badge-pharma","Pharma"], consult: ["badge-consult","Consulting"] };
+const wlbIcons = { 2: "★★☆☆☆", 3: "★★★☆☆", 4: "★★★★☆", 5: "★★★★★" };
+
+let sortState = { quant: { col: "salary", asc: false }, ai: { col: "salary", asc: false } };
+
+function renderRows(section, data) {
+  const tbody = document.getElementById(section + "-tbody");
+  tbody.innerHTML = data.map(d => {
+    const [bClass, bLabel] = badgeMap[d.type];
+    return `<tr>
+      <td style="font-weight:500; color:var(--color-text-primary); min-width:160px;">${d.company}</td>
+      <td><span class="badge ${bClass}">${bLabel}</span></td>
+      <td style="white-space:nowrap; font-variant-numeric: tabular-nums;">CHF ${d.salaryLow}k – ${d.salaryHigh}k</td>
+      <td>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="stars">${wlbIcons[d.wlb]}</span>
+          <span class="pill ${d.wlbClass}">${d.wlbLabel}</span>
+        </div>
+      </td>
+      <td style="color:var(--color-text-secondary); font-size:12px; min-width:200px;">${d.trade}</td>
+    </tr>`;
+  }).join("");
+}
+
+function sortTable(section, col) {
+  const st = sortState[section];
+  if (st.col === col) { st.asc = !st.asc; } else { st.col = col; st.asc = false; }
+
+  ["salary","wlb"].forEach(c => {
+    const el = document.getElementById(section + "-" + c + "-sort");
+    if (el) el.textContent = "⇅";
+    if (el) el.className = "sort-btn";
+  });
+  const active = document.getElementById(section + "-" + col + "-sort");
+  if (active) { active.textContent = st.asc ? "↑" : "↓"; active.className = "sort-btn active"; }
+
+  const data = section === "quant" ? [...quantData] : [...aiData];
+  data.sort((a, b) => {
+    let va = col === "salary" ? a.salaryHigh : a.wlb;
+    let vb = col === "salary" ? b.salaryHigh : b.wlb;
+    return st.asc ? va - vb : vb - va;
+  });
+  renderRows(section, data);
+}
+
+function showTab(tab, btn) {
+  document.getElementById("quant-section").style.display = tab === "quant" ? "" : "none";
+  document.getElementById("ai-section").style.display = tab === "ai" ? "" : "none";
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+renderRows("quant", quantData);
+renderRows("ai", aiData);
+</script>
