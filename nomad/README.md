@@ -9,11 +9,11 @@ Welcome to the **Digital Nomad & Remote Careers** master guide. This document pr
 
 The digital nomad workspace contains five core research files. Use these links to access the original documentation:
 
-*   **[digital_nomad_ai_series_master_summary.md](file:///p:/Project/INFO/nomad/digital_nomad_ai_series_master_summary.md)** (~29 KB): Synthesis of all 4 parts of the series, covering career setup, hidden dimensions, and advanced banking systems.
-*   **[ai_ds_digital_nomad_roadmap_2026.md](file:///p:/Project/INFO/nomad/ai_ds_digital_nomad_roadmap_2026.md)** (~35 KB): The core technical roadmap, remote job portals, productized services, country guides, and wealth projections.
-*   **[ai_nomad_unexplored_dimensions_2026.md](file:///p:/Project/INFO/nomad/ai_nomad_unexplored_dimensions_2026.md)** (~43 KB): Detailed analysis of mental health, cross-border relationships, cybersecurity stacks, health insurance, and legal and compliance risks.
-*   **[advanced_nomad_systems_2026.md](file:///p:/Project/INFO/nomad/advanced_nomad_systems_2026.md)** (~46 KB): In-depth mechanics of passport mobility, CBI/Golden Visa programs, 3-layer banking architectures, travel hacking, and digital product marketplaces.
-*   **[comprehensive_digital_nomad_ai_series.md](file:///p:/Project/INFO/nomad/comprehensive_digital_nomad_ai_series.md)** (~118 KB): The complete unedited series compilation, featuring transcripts and extensive resource tables.
+*   **[digital_nomad_ai_series_master_summary.md](digital_nomad_ai_series_master_summary.md)** (~29 KB): Synthesis of all 4 parts of the series, covering career setup, hidden dimensions, and advanced banking systems.
+*   **[ai_ds_digital_nomad_roadmap_2026.md](ai_ds_digital_nomad_roadmap_2026.md)** (~35 KB): The core technical roadmap, remote job portals, productized services, country guides, and wealth projections.
+*   **[ai_nomad_unexplored_dimensions_2026.md](ai_nomad_unexplored_dimensions_2026.md)** (~43 KB): Detailed analysis of mental health, cross-border relationships, cybersecurity stacks, health insurance, and legal and compliance risks.
+*   **[advanced_nomad_systems_2026.md](advanced_nomad_systems_2026.md)** (~46 KB): In-depth mechanics of passport mobility, CBI/Golden Visa programs, 3-layer banking architectures, travel hacking, and digital product marketplaces.
+*   **[comprehensive_digital_nomad_ai_series.md](comprehensive_digital_nomad_ai_series.md)** (~118 KB): The complete unedited series compilation, featuring transcripts and extensive resource tables.
 
 ---
 
@@ -29,7 +29,7 @@ Sustain a long-term, high-income remote career by executing your transition in f
 ---
 
 ## 🏛️ Phase 1: Technical Foundation & Skill Roadmap
-*Detail Reference:* [ai_ds_digital_nomad_roadmap_2026.md](file:///p:/Project/INFO/nomad/ai_ds_digital_nomad_roadmap_2026.md#2-essential-skills-roadmap)
+*Detail Reference:* [ai_ds_digital_nomad_roadmap_2026.md](ai_ds_digital_nomad_roadmap_2026.md#2-essential-skills-roadmap)
 
 Data Science is the highest-earning digital nomad career, yielding average nomad earnings of **$132,000/year**.
 
@@ -48,7 +48,7 @@ Data Science is the highest-earning digital nomad career, yielding average nomad
 ---
 
 ## 💼 Phase 2: Remote Job Search & Freelancing System
-*Detail Reference:* [ai_ds_digital_nomad_roadmap_2026.md](file:///p:/Project/INFO/nomad/ai_ds_digital_nomad_roadmap_2026.md#3-remote-jobs-getting-hired-from-anywhere) & [advanced_nomad_systems_2026.md](file:///p:/Project/INFO/nomad/advanced_nomad_systems_2026.md#7-underrated-freelance-platforms)
+*Detail Reference:* [ai_ds_digital_nomad_roadmap_2026.md](ai_ds_digital_nomad_roadmap_2026.md#3-remote-jobs-getting-hired-from-anywhere) & [advanced_nomad_systems_2026.md](advanced_nomad_systems_2026.md#7-underrated-freelance-platforms)
 
 ### 1. Job Boards & Vetted Platforms
 *   **Remote Jobs:** Working Nomads, Himalayas, RemoteOK, Arc.dev, Wellfound (startups).
@@ -77,7 +77,7 @@ Your passport dictates your visa-processing lead times and consulate logistics:
 *   *Mitigation for Weak Passports:* Build a "trust chain" by securing US B1/B2, UK, and Schengen visas early. Use European nomad visas (e.g., Portugal D8) as Schengen residency anchors.
 
 ### 2. Citizenship by Investment (CBI) & Golden Visas
-*Detail Reference:* [advanced_nomad_systems_2026.md](file:///p:/Project/INFO/nomad/advanced_nomad_systems_2026.md#2-second-passport--citizenship-strategy)
+*Detail Reference:* [advanced_nomad_systems_2026.md](advanced_nomad_systems_2026.md#2-second-passport--citizenship-strategy)
 
 *   **Fast Caribbean Passports:** Dominica ($100K donation, 2–4 mos), St. Lucia ($100K donation, 3–6 mos), Grenada ($150K donation, US E-2 visa eligible), Vanuatu ($130K donation, 30–60 days - fastest globally).
 *   **European Golden Visas:** Portugal GV (€250K–€500K, 5-year path to passport), Greece GV (€250K–€800K real estate), UAE Golden Visa (10-year, $200K investment or tech specialist status).
@@ -101,7 +101,7 @@ Your passport dictates your visa-processing lead times and consulate logistics:
 ---
 
 ## 🏦 Phase 4: Financial & Operations Infrastructure
-*Detail Reference:* [advanced_nomad_systems_2026.md](file:///p:/Project/INFO/nomad/advanced_nomad_systems_2026.md#4-banking-architecture-for-nomads)
+*Detail Reference:* [advanced_nomad_systems_2026.md](advanced_nomad_systems_2026.md#4-banking-architecture-for-nomads)
 
 ### 1. 3-Layer Banking Architecture
 *   **Layer 1 — Daily Operations (Wise & Revolut):** Wise holds 40+ currencies with local banking details (US, EU, UK, AU). Conversion spreads are 0.33–1.5% at mid-market rates. Revolut is best for daily spending (weekday interbank rates, eSIM data integrations).
@@ -124,7 +124,7 @@ Nomads can set up a Wyoming or Delaware LLC. This unlocks:
 ## 🔒 Phase 5: Hardening, Safety & Compliance
 
 ### 1. Cybersecurity Protocol (Non-Negotiable Stack)
-*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](file:///p:/Project/INFO/nomad/ai_nomad_unexplored_dimensions_2026.md#3-cybersecurity-and-data-protection)
+*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](ai_nomad_unexplored_dimensions_2026.md#3-cybersecurity-and-data-protection)
 *   **Mullvad / ProtonVPN:** Run continuously on all devices to encrypt public WiFi traffic.
 *   **1Password / Bitwarden:** Unique, high-entropy passwords for all service logins.
 *   **YubiKey 5 NFC:** Hardware-based 2FA keys to prevent phishing.
@@ -132,14 +132,14 @@ Nomads can set up a Wyoming or Delaware LLC. This unlocks:
 *   **Backblaze:** Automatic background cloud backup.
 
 ### 2. Legal Compliance & Tax Risks (The Grey-Area Era is Over)
-*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](file:///p:/Project/INFO/nomad/ai_nomad_unexplored_dimensions_2026.md#5-legal-and-tax-implications)
+*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](ai_nomad_unexplored_dimensions_2026.md#5-legal-and-tax-implications)
 *   **Permanent Establishment (PE) Risk:** Working in a country can expose your employer to local corporate tax liabilities. This is especially true for employees with signing authority.
 *   **183-Day Rule:** Most countries claim tax residency if you spend more than 183 days inside their borders.
 *   **The 36% Employer Consent Gap:** Over a third of employed nomads work across borders without formal HR approval, risking immediate termination or compliance audits. Proactively use Employer-of-Record (EOR) options like Deel or Remote.com.
 *   **Equity Vesting Risk:** Host countries may tax stock options that vest during your residency, creating unexpected tax liabilities.
 
 ### 3. Healthcare & Medical Tourism
-*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](file:///p:/Project/INFO/nomad/ai_nomad_unexplored_dimensions_2026.md#4-health-and-well-being-abroad)
+*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](ai_nomad_unexplored_dimensions_2026.md#4-health-and-well-being-abroad)
 *   **SafetyWing Nomad Insurance:** Excellent for emergency medical evacuations and travel mishaps ($48–$180/month).
 *   **Cigna Global:** Full international health insurance, including routine, preventive, and mental health care ($200–$500/month).
 *   **Medical Tourism Cost Arbitrage (SE Asia vs. US):**
@@ -148,7 +148,7 @@ Nomads can set up a Wyoming or Delaware LLC. This unlocks:
     *   *Executive Health Screening:* $80–$200 vs. $400–$1,500.
 
 ### 4. Psychological Wellbeing & Ethics
-*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](file:///p:/Project/INFO/nomad/ai_nomad_unexplored_dimensions_2026.md#1-psychological-well-being)
+*Detail Reference:* [ai_nomad_unexplored_dimensions_2026.md](ai_nomad_unexplored_dimensions_2026.md#1-psychological-well-being)
 *   **Mental Health:** Expats are **2.5x more likely** to experience anxiety/depression. Prevent isolation by practicing **Slowmadism** (staying 3–6 months per base) instead of moving every few weeks. Anchor your routine with CrossFit boxes, coworking groups, and regular telehealth therapy.
 *   **Ethical Footprint:** Digital nomads have driven rental inflation (+37% in Lisbon in a single year, CDMX, Chiang Mai). Support the local economy: lease directly from locals, dine at family-owned spots, and avoid trend-saturated neighborhoods.
 

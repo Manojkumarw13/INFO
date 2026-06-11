@@ -9,10 +9,10 @@ Welcome to the **Careers & Global Opportunities** master guide. This document pr
 
 The career strategy workspace contains four core research files. Use these links to access the original documentation and underlying research:
 
-*   **[global_careers_comparison.md](file:///p:/Project/INFO/careers/global_careers_comparison.md)** (~38 KB): Comprehensive benchmarking of QuantTech, FinTech, and AI/DS across 12 countries, with detailed company compensation bands.
-*   **[swiss_quant_vs_ai_ds_careers.md](file:///p:/Project/INFO/careers/swiss_quant_vs_ai_ds_careers.md)** (~25 KB): Dedicated analysis of the Swiss Quant vs. AI/DS career tracks, covering local employers, requirements, and structural trade-offs.
-*   **[swiss_ai_ds_vs_alternatives.md](file:///p:/Project/INFO/careers/swiss_ai_ds_vs_alternatives.md)** (~42 KB): In-depth breakdown of Switzerland vs. Netherlands, Singapore, Canada, Germany, UK, UAE, and Remote tracks.
-*   **[top4_qol_inr_comparison.md](file:///p:/Project/INFO/careers/top4_qol_inr_comparison.md)** (~4.4 KB): Quantitative Quality of Life (QoL) and take-home savings scorecard converted into Indian Rupees (INR).
+*   **[global_careers_comparison.md](global_careers_comparison.md)** (~38 KB): Comprehensive benchmarking of QuantTech, FinTech, and AI/DS across 12 countries, with detailed company compensation bands.
+*   **[swiss_quant_vs_ai_ds_careers.md](swiss_quant_vs_ai_ds_careers.md)** (~25 KB): Dedicated analysis of the Swiss Quant vs. AI/DS career tracks, covering local employers, requirements, and structural trade-offs.
+*   **[swiss_ai_ds_vs_alternatives.md](swiss_ai_ds_vs_alternatives.md)** (~42 KB): In-depth breakdown of Switzerland vs. Netherlands, Singapore, Canada, Germany, UK, UAE, and Remote tracks.
+*   **[top4_qol_inr_comparison.md](top4_qol_inr_comparison.md)** (~4.4 KB): Quantitative Quality of Life (QoL) and take-home savings scorecard converted into Indian Rupees (INR).
 
 ---
 
@@ -214,7 +214,7 @@ Switzerland represents a high-compensation benchmark. However, cost of living, t
 ---
 
 ## 📊 Quality of Life & Real Income in Indian Rupees (INR)
-*Detail Reference:* [top4_qol_inr_comparison.md](file:///p:/Project/INFO/careers/top4_qol_inr_comparison.md)
+*Detail Reference:* [top4_qol_inr_comparison.md](top4_qol_inr_comparison.md)
 
 For international graduates comparing take-home savings, here is the net income projection in Indian Rupees (converted at 2026 average rates: 1 USD = ₹83.5 | 1 CHF = ₹94.0 | 1 EUR = ₹90.2 | 1 AED = ₹22.7):
 

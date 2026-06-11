@@ -9,13 +9,13 @@ Welcome to the **Resources & Study Tracks** master guide. This document provides
 
 The study resource workspace contains seven core research files. Use these links to access the original documentation:
 
-*   **[roadmap_differentiated_tracks.md](file:///p:/Project/INFO/resources/roadmap_differentiated_tracks.md)** (~35 KB): The definitive track allocation matrix, prioritizing 200+ topics across the three tracks.
-*   **[free_resources_roadmap.md](file:///p:/Project/INFO/resources/free_resources_roadmap.md)** (~40 KB): Verified free and legal learning resources (MIT, Stanford, Harvard courses, free PDFs, and documentation).
-*   **[youtube-roadmap-deduplicated.md](file:///p:/Project/INFO/resources/youtube-roadmap-deduplicated.md)** (~30 KB): Curated YouTube playlists categorized by phase and track.
-*   **[career_roadmap_checklist_differentiated.md](file:///p:/Project/INFO/resources/career_roadmap_checklist_differentiated.md)** (~4 KB): Interactive milestone checklist sorted by track.
-*   **[career-roadmap-checklist.md](file:///p:/Project/INFO/resources/career-roadmap-checklist.md)** (~4 KB): Core structural tracking sheet for progress mapping.
-*   **[tools-master-list.md](file:///p:/Project/INFO/resources/tools-master-list.md)** (~15 KB): Comprehensive index of 109 tools, packages, and frameworks sorted by category.
-*   **[notebooklm-compatible-resources.md](file:///p:/Project/INFO/resources/notebooklm-compatible-resources.md)** (~60 KB): Clean text summaries of all resources compiled for easy ingestion into Google's NotebookLM.
+*   **[roadmap_differentiated_tracks.md](roadmap_differentiated_tracks.md)** (~35 KB): The definitive track allocation matrix, prioritizing 200+ topics across the three tracks.
+*   **[free_resources_roadmap.md](free_resources_roadmap.md)** (~40 KB): Verified free and legal learning resources (MIT, Stanford, Harvard courses, free PDFs, and documentation).
+*   **[youtube-roadmap-deduplicated.md](youtube-roadmap-deduplicated.md)** (~30 KB): Curated YouTube playlists categorized by phase and track.
+*   **[career_roadmap_checklist_differentiated.md](career_roadmap_checklist_differentiated.md)** (~4 KB): Interactive milestone checklist sorted by track.
+*   **[career-roadmap-checklist.md](career-roadmap-checklist.md)** (~4 KB): Core structural tracking sheet for progress mapping.
+*   **[tools-master-list.md](tools-master-list.md)** (~15 KB): Comprehensive index of 109 tools, packages, and frameworks sorted by category.
+*   **[notebooklm-compatible-resources.md](notebooklm-compatible-resources.md)** (~60 KB): Clean text summaries of all resources compiled for easy ingestion into Google's NotebookLM.
 
 ---
 
@@ -155,7 +155,7 @@ Your study journey is structured into 8 progressive phases over a 12-to-18-month
 ---
 
 ## 🛠️ Track-Specific Topic Matrix
-*Detail Reference:* [roadmap_differentiated_tracks.md](file:///p:/Project/INFO/resources/roadmap_differentiated_tracks.md#topic-count-summary)
+*Detail Reference:* [roadmap_differentiated_tracks.md](roadmap_differentiated_tracks.md#topic-count-summary)
 
 This table allocates priority topics across the three career paths (⚡ Critical Weight | ✅ Required | ◐ Secondary | — Not Required):
 

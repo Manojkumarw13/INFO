@@ -9,16 +9,16 @@ Welcome to the **Side Hustle & Freelance** master guide. This document provides 
 
 The side hustle workspace contains ten core research files. Use these links to access the original documentation:
 
-*   **[comprehensive-side-hustle-master-guide.md](file:///p:/Project/INFO/side%20hustle/comprehensive-side-hustle-master-guide.md)** (~51 KB): The master synthesis of all freelance services, niche frameworks, branding, and content engines.
-*   **[complete-freelancing-blueprint.md](file:///p:/Project/INFO/side%20hustle/complete-freelancing-blueprint.md)** (~53 KB): Deep-dive templates for Fiverr gig setup, Upwork SEO, proposal writing, and portfolio building.
-*   **[freelancing-blueprint.md](file:///p:/Project/INFO/side%20hustle/freelancing-blueprint.md)** (~11 KB): High-level operational strategies and client onboarding protocols.
-*   **[freelancing-roadmap.md](file:///p:/Project/INFO/side%20hustle/freelancing-roadmap.md)** (~7 KB): Week-by-week sprint logs and progress checklists.
-*   **[AI_Freelance_Master_Plan.md](file:///p:/Project/INFO/side%20hustle/AI_Freelance_Master_Plan.md)** (~14 KB): Roadmap focusing on high-ticket AI engineering services and client outreach.
-*   **[passive-income-student-blueprint.md](file:///p:/Project/INFO/side%20hustle/passive-income-student-blueprint.md)** (~20 KB): Detailed guide on digital templates, Udemy courses, newsletters, and affiliate marketing.
-*   **[nexora_content_strategy.md](file:///p:/Project/INFO/side%20hustle/nexora_content_strategy.md)** (~10 KB): Scripting outlines, target demographics, and publishing cadences for the Nexora brand.
-*   **[nexora_implementation_plan.md](file:///p:/Project/INFO/side%20hustle/nexora_implementation_plan.md)** (~9 KB): Workflow calendars, tools, and technical setup plans for Nexora channels.
-*   **[ai_freelance_roadmap.html](file:///p:/Project/INFO/side%20hustle/ai_freelance_roadmap.html)** (~42 KB): Interactive HTML visualization mapping the freelance scaling journey.
-*   **[content_calendar_3months.html](file:///p:/Project/INFO/side%20hustle/content_calendar_3months.html)** (~36 KB): Interactive HTML editorial calendar database for the Nexora brand.
+*   **[comprehensive-side-hustle-master-guide.md](comprehensive-side-hustle-master-guide.md)** (~51 KB): The master synthesis of all freelance services, niche frameworks, branding, and content engines.
+*   **[complete-freelancing-blueprint.md](complete-freelancing-blueprint.md)** (~53 KB): Deep-dive templates for Fiverr gig setup, Upwork SEO, proposal writing, and portfolio building.
+*   **[freelancing-blueprint.md](freelancing-blueprint.md)** (~11 KB): High-level operational strategies and client onboarding protocols.
+*   **[freelancing-roadmap.md](freelancing-roadmap.md)** (~7 KB): Week-by-week sprint logs and progress checklists.
+*   **[AI_Freelance_Master_Plan.md](AI_Freelance_Master_Plan.md)** (~14 KB): Roadmap focusing on high-ticket AI engineering services and client outreach.
+*   **[passive-income-student-blueprint.md](passive-income-student-blueprint.md)** (~20 KB): Detailed guide on digital templates, Udemy courses, newsletters, and affiliate marketing.
+*   **[nexora_content_strategy.md](nexora_content_strategy.md)** (~10 KB): Scripting outlines, target demographics, and publishing cadences for the Nexora brand.
+*   **[nexora_implementation_plan.md](nexora_implementation_plan.md)** (~9 KB): Workflow calendars, tools, and technical setup plans for Nexora channels.
+*   **[ai_freelance_roadmap.html](ai_freelance_roadmap.html)** (~42 KB): Interactive HTML visualization mapping the freelance scaling journey.
+*   **[content_calendar_3months.html](content_calendar_3months.html)** (~36 KB): Interactive HTML editorial calendar database for the Nexora brand.
 
 ---
 
@@ -86,7 +86,7 @@ Set up your accounts in this chronological order, reusing optimized branding ass
 ---
 
 ## 📁 Phase 3: No-Client Portfolio Specs & Case Studies
-*Detail Reference:* [complete-freelancing-blueprint.md](file:///p:/Project/INFO/side%20hustle/complete-freelancing-blueprint.md#6-portfolio-building-from-zero-to-five-projects)
+*Detail Reference:* [complete-freelancing-blueprint.md](complete-freelancing-blueprint.md#6-portfolio-building-from-zero-to-five-projects)
 
 Build five mock projects to populate your Notion Portfolio Hub:
 
@@ -107,7 +107,7 @@ Document each portfolio piece on your Notion Portfolio Hub using this layout:
 ---
 
 ## 📈 Phase 4: Pitching, Proposals & Outreach
-*Detail Reference:* [comprehensive-side-hustle-master-guide.md](file:///p:/Project/INFO/side%20hustle/comprehensive-side-hustle-master-guide.md#9-proposal-pitch--outreach-writing-system)
+*Detail Reference:* [comprehensive-side-hustle-master-guide.md](comprehensive-side-hustle-master-guide.md#9-proposal-pitch--outreach-writing-system)
 
 ### 1. The 5-Element Proposal Structure
 Use this framework to draft Upwork cover letters and Internshala applications:
@@ -128,7 +128,7 @@ Use this framework to draft Upwork cover letters and Internshala applications:
 ---
 
 ## 📢 Phase 5: The Nexora Content Engine
-*Detail Reference:* [nexora_content_strategy.md](file:///p:/Project/INFO/side%20hustle/nexora_content_strategy.md) & [nexora_implementation_plan.md](file:///p:/Project/INFO/side%20hustle/nexora_implementation_plan.md)
+*Detail Reference:* [nexora_content_strategy.md](nexora_content_strategy.md) & [nexora_implementation_plan.md](nexora_implementation_plan.md)
 
 Grow a faceless personal brand under the name **Nexora** to drive inbound client leads.
 
@@ -157,7 +157,7 @@ Use these prompts in NotebookLM to generate scripts and outlines from your files
 ---
 
 ## 💰 Phase 6: Passive Income Blueprints
-*Detail Reference:* [passive-income-student-blueprint.md](file:///p:/Project/INFO/side%20hustle/passive-income-student-blueprint.md)
+*Detail Reference:* [passive-income-student-blueprint.md](passive-income-student-blueprint.md)
 
 | Income Stream | Platforms | Monetization Blueprint | Scale Math |
 | :--- | :--- | :--- | :--- |
