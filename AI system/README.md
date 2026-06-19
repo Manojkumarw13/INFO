@@ -54,6 +54,8 @@ Below is the directory map of the 9 core files in this folder. Use these links t
 | **free-ai-models-comprehensive-2026.md** | 144 KB | Model Analysis | Mega-compilation mapping free models, AI tooling, and PAIOS architecture. | [free-ai-models-comprehensive-2026.md](free-ai-models-comprehensive-2026.md) |
 | **free-cloud-ai-models-2026.md** | 36 KB | Model Analysis | Limitations, comparison tables, and analysis of 10 cloud-hosted API providers. | [free-cloud-ai-models-2026.md](free-cloud-ai-models-2026.md) |
 | **free-ai-models-guide-2026.md** | 35 KB | Model Analysis | Summary rankings, decision trees, and free-tier stacking inference paths. | [free-ai-models-guide-2026.md](free-ai-models-guide-2026.md) |
+| **free-ai-apis-developer-guide-2026.md** | 48 KB | Model Analysis | Definitive guide evaluating free AI model APIs, capability rankings, and zero-cost stack recommendations. | [free-ai-apis-developer-guide-2026.md](free-ai-apis-developer-guide-2026.md) |
+| **free-ai-api-providers-2026.md** | 20 KB | Model Analysis | Reference guide for developer-accessible free API tiers across 14 LLM providers. | [free-ai-api-providers-2026.md](free-ai-api-providers-2026.md) |
 
 ---
 

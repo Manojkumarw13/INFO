@@ -93,6 +93,8 @@ Below is an overview of the purpose, core contents, dependencies, and outputs of
     *   [AI_OS_Complete_Toolkit_Guide.md](./AI%20system/AI_OS_Complete_Toolkit_Guide.md): Detailed installation guides for coding agents (OpenHands, Aider), vector stores, and custom MCP servers.
     *   [ai_agent_os_8week_roadmap.md](./AI%20system/ai_agent_os_8week_roadmap.md): Windows-based 8-week build and deployment track.
     *   [free-ai-models-comprehensive-2026.md](./AI%20system/free-ai-models-comprehensive-2026.md): API rate limits and benchmarks for 14 free LLM providers.
+    *   [free-ai-apis-developer-guide-2026.md](./AI%20system/free-ai-apis-developer-guide-2026.md): Comprehensive guide evaluating free AI model APIs, capability rankings, and zero-cost stack recommendations.
+    *   [free-ai-api-providers-2026.md](./AI%20system/free-ai-api-providers-2026.md): Reference guide for developer-accessible free API tiers across 14 LLM providers.
 *   **Dependencies:** Built using developer tools and databases indexed in [resources/](./resources/) (MLOps & database sections).
 *   **Outputs:** A local, private automation server. This automates content creation and scheduling in [side hustle/](./side%20hustle/) and secures remote communication tunnels in [nomad/](./nomad/).
 
@@ -182,6 +184,8 @@ For deep-dive documentation, comparison tables, checklists, and timelines, navig
 *   **[free-ai-models-comprehensive-2026.md](./AI%20system/free-ai-models-comprehensive-2026.md)**: Detailed benchmarks, API limits, and model deep-dives for 14 free LLM providers.
 *   **[free-cloud-ai-models-2026.md](./AI%20system/free-cloud-ai-models-2026.md)**: Cloud-hosted model APIs, rate limits, and stacking strategies.
 *   **[free-ai-models-guide-2026.md](./AI%20system/free-ai-models-guide-2026.md)**: Quick-pick summaries and instructions for combining free AI tiers.
+*   **[free-ai-apis-developer-guide-2026.md](./AI%20system/free-ai-apis-developer-guide-2026.md)**: Comprehensive guide evaluating free AI model APIs, capability rankings, and zero-cost stack recommendations.
+*   **[free-ai-api-providers-2026.md](./AI%20system/free-ai-api-providers-2026.md)**: Reference guide for developer-accessible free API tiers across 14 LLM providers.
 
 ### 💼 [careers](./careers) (Global Destinations & Comp)
 *   **[README.md](./careers/README.md)**: Master navigator and chronological career decision path.
